@@ -1,0 +1,20 @@
+{
+  "check": "Automation",
+  "result": "Passed",
+  "exitCode": 0,
+  "filter": "Doc.Playtest",
+  "discovered": 10,
+  "passed": 10,
+  "failed": 0,
+  "notPassedOrFailed": 0,
+  "failedTests": [],
+  "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Playtest\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-172948-Automation-Doc.Playtest-a83c63\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-172948-Automation-Doc.Playtest-a83c63\\editor.log\"",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "rhi": "NullRHI (logic-only)",
+  "sourceSha256": "CC585353796C9B6490F8AA6CC3ADC91C06A508E17B623CC33E3A2074F98A1464",
+  "start": "2026-09-27T17:29:49.1337353-04:00",
+  "end": "2026-09-27T17:30:01.4953106-04:00",
+  "report": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-172948-Automation-Doc.Playtest-a83c63\\Report",
+  "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-172948-Automation-Doc.Playtest-a83c63\\editor.log"
+}

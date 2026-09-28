@@ -1,0 +1,15 @@
+﻿{
+    "check":  "Build",
+    "result":  "Passed",
+    "exitCode":  0,
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Build\\BatchFiles\\Build.bat\" DocModularDevEditor Win64 Development -Project=\"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -WaitMutex",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "target":  "DocModularDevEditor",
+    "configuration":  "Development",
+    "unity":  true,
+    "sourceSha256":  "A84B1C0DD27D83F443778F4ECDF76F8DBE3F25C6B54977E1B9530F87951305A8",
+    "start":  "2026-09-27T13:01:36.9845376-04:00",
+    "end":  "2026-09-27T13:01:42.0547493-04:00",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-130136-DocModularDevEditor-Development-28bcce\\build.log"
+}

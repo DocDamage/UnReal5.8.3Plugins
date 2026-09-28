@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed",
+    "exitCode":  0,
+    "filter":  "Doc.Optics",
+    "discovered":  10,
+    "passed":  9,
+    "failed":  1,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+                        "Doc.Optics.RestoreRecompute"
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Optics\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-151904-Automation-Doc.Optics-2e3208\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-151904-Automation-Doc.Optics-2e3208\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "84C881C1EE95900B328F89A8893DC27AE20E1FA65EB501B7605DBE4B11105A01",
+    "start":  "2026-09-27T15:19:04.8978119-04:00",
+    "end":  "2026-09-27T15:19:17.2389168-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-151904-Automation-Doc.Optics-2e3208\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-151904-Automation-Doc.Optics-2e3208\\editor.log"
+}

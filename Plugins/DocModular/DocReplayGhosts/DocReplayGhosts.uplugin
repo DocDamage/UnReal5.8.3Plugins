@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "DocReplayGhosts",
+	"Description": "Record selected motion and presentation state over time and play it through isolated, collisionless visual surrogates with indexed scrubbing.",
+	"Category": "Gameplay",
+	"CreatedBy": "DocModular",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "DocReplayGhostsRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "DocModularCore",
+			"Enabled": true
+		}
+	]
+}

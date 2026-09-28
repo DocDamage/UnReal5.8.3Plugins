@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Sequences",
+    "discovered":  5,
+    "passed":  5,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Sequences\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-125104-Automation-Doc.Sequences-0bfdd9\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-125104-Automation-Doc.Sequences-0bfdd9\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "B7DE80568F4D4BDBF68999BEFBEA421E05D17E5618C04BF78D3843BB6E821835",
+    "start":  "2026-09-27T12:51:04.5378798-04:00",
+    "end":  "2026-09-27T12:51:17.1283223-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-125104-Automation-Doc.Sequences-0bfdd9\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-125104-Automation-Doc.Sequences-0bfdd9\\editor.log"
+}

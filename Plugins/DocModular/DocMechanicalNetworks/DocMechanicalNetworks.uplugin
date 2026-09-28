@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "DocMechanicalNetworks",
+	"Description": "Kinematic rotational drive transmission through motors, shafts, gears, belts, clutches, and loads with load reflection and stall policies.",
+	"Category": "Gameplay",
+	"CreatedBy": "DocModular",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"IsExperimentalVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "DocMechanicalNetworksRuntime",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "DocModularCore",
+			"Enabled": true
+		}
+	]
+}

@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed",
+    "exitCode":  0,
+    "filter":  "Doc.Regions",
+    "discovered":  5,
+    "passed":  4,
+    "failed":  1,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+                        "Doc.Regions.UnloadReload"
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Regions\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122410-Automation-Doc.Regions-7e7606\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122410-Automation-Doc.Regions-7e7606\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "4BBAC3F6404433C9EF1AAA8207B3FD887B2C4FBD80F03F62631D9EE16829724D",
+    "start":  "2026-09-27T12:24:10.2471031-04:00",
+    "end":  "2026-09-27T12:24:23.2196547-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122410-Automation-Doc.Regions-7e7606\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122410-Automation-Doc.Regions-7e7606\\editor.log"
+}

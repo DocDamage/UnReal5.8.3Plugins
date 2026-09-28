@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed",
+    "exitCode":  0,
+    "filter":  "Doc.Interaction",
+    "discovered":  7,
+    "passed":  6,
+    "failed":  1,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+                        "Doc.Interaction.CandidateSelection"
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Interaction\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-121906-Automation-Doc.Interaction-77d262\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-121906-Automation-Doc.Interaction-77d262\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "28AECC92E4913F449E33533EF711B5FEEC3B707D14ED217C231750E559527DA4",
+    "start":  "2026-09-27T12:19:06.7449653-04:00",
+    "end":  "2026-09-27T12:19:19.7342838-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-121906-Automation-Doc.Interaction-77d262\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-121906-Automation-Doc.Interaction-77d262\\editor.log"
+}

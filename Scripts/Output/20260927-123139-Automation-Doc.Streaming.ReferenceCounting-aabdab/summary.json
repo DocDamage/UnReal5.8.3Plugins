@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Streaming.ReferenceCounting",
+    "discovered":  1,
+    "passed":  1,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Streaming.ReferenceCounting\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-123139-Automation-Doc.Streaming.ReferenceCounting-aabdab\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-123139-Automation-Doc.Streaming.ReferenceCounting-aabdab\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "9639E524326D18C5F7D67878B23A911B6A5F6343EEBDE4000205AFF971D24039",
+    "start":  "2026-09-27T12:31:40.0807084-04:00",
+    "end":  "2026-09-27T12:31:52.1664260-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-123139-Automation-Doc.Streaming.ReferenceCounting-aabdab\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-123139-Automation-Doc.Streaming.ReferenceCounting-aabdab\\editor.log"
+}

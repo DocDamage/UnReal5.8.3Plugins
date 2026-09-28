@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Photo",
+    "discovered":  10,
+    "passed":  10,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Photo\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-160252-Automation-Doc.Photo-714af9\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-160252-Automation-Doc.Photo-714af9\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "33869BD085A3447AF06167BEE19FA14B85BF6F0E3FED44D609D63539238D5DCE",
+    "start":  "2026-09-27T16:02:52.5647168-04:00",
+    "end":  "2026-09-27T16:03:04.9135739-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-160252-Automation-Doc.Photo-714af9\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-160252-Automation-Doc.Photo-714af9\\editor.log"
+}

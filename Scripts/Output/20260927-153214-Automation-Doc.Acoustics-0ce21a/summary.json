@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Acoustics",
+    "discovered":  10,
+    "passed":  10,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Acoustics\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-153214-Automation-Doc.Acoustics-0ce21a\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-153214-Automation-Doc.Acoustics-0ce21a\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "F2C3814D9A3E2707A3F9969DBCDD4291FE650FE7DD49C66294F7EB2AFEC775F8",
+    "start":  "2026-09-27T15:32:15.0337028-04:00",
+    "end":  "2026-09-27T15:32:27.4175252-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-153214-Automation-Doc.Acoustics-0ce21a\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-153214-Automation-Doc.Acoustics-0ce21a\\editor.log"
+}

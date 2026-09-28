@@ -1,0 +1,185 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.8",
+	"Category": "",
+	"Description": "Development host for the DocModular reusable gameplay plugin suite. Not a game.",
+	"Modules": [
+		{
+			"Name": "DocModularDev",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "DocModularCore",
+			"Enabled": true
+		},
+		{
+			"Name": "DocEvents",
+			"Enabled": true
+		},
+		{
+			"Name": "DocInteraction",
+			"Enabled": true
+		},
+		{
+			"Name": "DocRegions",
+			"Enabled": true
+		},
+		{
+			"Name": "DocTime",
+			"Enabled": true
+		},
+		{
+			"Name": "DocStreaming",
+			"Enabled": true
+		},
+		{
+			"Name": "DocSave",
+			"Enabled": true
+		},
+		{
+			"Name": "DocAdaptiveAudio",
+			"Enabled": true
+		},
+		{
+			"Name": "DocSequences",
+			"Enabled": true
+		},
+		{
+			"Name": "DocInspection",
+			"Enabled": true
+		},
+		{
+			"Name": "DocWorldActivation",
+			"Enabled": true
+		},
+		{
+			"Name": "DocSurfaceFeedback",
+			"Enabled": true
+		},
+		{
+			"Name": "DocMapNavigation",
+			"Enabled": true
+		},
+		{
+			"Name": "DocWeather",
+			"Enabled": true
+		},
+		{
+			"Name": "DocNPCSchedules",
+			"Enabled": true
+		},
+		{
+			"Name": "DocDialogue",
+			"Enabled": true
+		},
+		{
+			"Name": "DocQuestObjectives",
+			"Enabled": true
+		},
+		{
+			"Name": "DocKnowledgeCodex",
+			"Enabled": true
+		},
+		{
+			"Name": "DocUnlocksProgression",
+			"Enabled": true
+		},
+		{
+			"Name": "DocInventoryItems",
+			"Enabled": true
+		},
+		{
+			"Name": "DocGameFrameworkUI",
+			"Enabled": true
+		},
+		{
+			"Name": "DocPuzzleMechanisms",
+			"Enabled": true
+		},
+		{
+			"Name": "DocServiceQueues",
+			"Enabled": true
+		},
+		{
+			"Name": "DocPowerNetworks",
+			"Enabled": true
+		},
+		{
+			"Name": "DocEvidenceDeduction",
+			"Enabled": true
+		},
+		{
+			"Name": "DocRhythmChallenges",
+			"Enabled": true
+		},
+		{
+			"Name": "DocOpticalBeams",
+			"Enabled": true
+		},
+		{
+			"Name": "DocAcousticSpaces",
+			"Enabled": true
+		},
+		{
+			"Name": "DocSurfacePainting",
+			"Enabled": true
+		},
+		{
+			"Name": "DocMaterialReactions",
+			"Enabled": true
+		},
+		{
+			"Name": "DocPhotography",
+			"Enabled": true
+		},
+		{
+			"Name": "DocBroadcastChannels",
+			"Enabled": true
+		},
+		{
+			"Name": "DocWorldTerminals",
+			"Enabled": true
+		},
+		{
+			"Name": "DocGestureRecognition",
+			"Enabled": true
+		},
+		{
+			"Name": "DocFluidNetworks",
+			"Enabled": true
+		},
+		{
+			"Name": "DocMechanicalNetworks",
+			"Enabled": true
+		},
+		{
+			"Name": "DocAssemblyMaintenance",
+			"Enabled": true
+		},
+		{
+			"Name": "DocReplayGhosts",
+			"Enabled": true
+		},
+		{
+			"Name": "DocRaceTiming",
+			"Enabled": true
+		},
+		{
+			"Name": "DocModContent",
+			"Enabled": true
+		},
+		{
+			"Name": "DocPlaytestRecorder",
+			"Enabled": true
+		},
+		{
+			"Name": "EnhancedInput",
+			"Enabled": true
+		}
+	]
+}
+
+

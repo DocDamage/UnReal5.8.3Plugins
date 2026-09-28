@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Schedule",
+    "discovered":  9,
+    "passed":  9,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Schedule\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131048-Automation-Doc.Schedule-f7f568\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131048-Automation-Doc.Schedule-f7f568\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "FE9030A6BC4C2144B8307A838269922C23C84EEA3EE1804DDB7910694DC90486",
+    "start":  "2026-09-27T13:10:48.5470174-04:00",
+    "end":  "2026-09-27T13:11:01.1586226-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131048-Automation-Doc.Schedule-f7f568\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131048-Automation-Doc.Schedule-f7f568\\editor.log"
+}

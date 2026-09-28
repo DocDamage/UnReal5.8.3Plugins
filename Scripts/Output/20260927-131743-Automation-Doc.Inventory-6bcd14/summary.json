@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Inventory",
+    "discovered":  13,
+    "passed":  13,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Inventory\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131743-Automation-Doc.Inventory-6bcd14\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131743-Automation-Doc.Inventory-6bcd14\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "AB73789DED1DAFDC26E1F6A96B96E5B644F26217652EF34E8359A981C77EFC83",
+    "start":  "2026-09-27T13:17:43.9047553-04:00",
+    "end":  "2026-09-27T13:17:55.9588860-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131743-Automation-Doc.Inventory-6bcd14\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-131743-Automation-Doc.Inventory-6bcd14\\editor.log"
+}

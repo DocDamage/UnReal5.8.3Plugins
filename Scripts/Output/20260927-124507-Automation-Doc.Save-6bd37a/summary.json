@@ -1,0 +1,27 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed",
+    "exitCode":  0,
+    "filter":  "Doc.Save",
+    "discovered":  12,
+    "passed":  6,
+    "failed":  6,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+                        "Doc.Save.BadFileKeepsProgress",
+                        "Doc.Save.Migration",
+                        "Doc.Save.RoundTrip",
+                        "Doc.Save.RuntimeSpawnRestore",
+                        "Doc.Save.StreamedOutRetention",
+                        "Doc.Save.Tombstone"
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Save\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-124507-Automation-Doc.Save-6bd37a\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-124507-Automation-Doc.Save-6bd37a\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "0F15A36A8A56AC88B9E352C47BA66CF2AB8CD62911A5558E26C4089ACBDBF7B8",
+    "start":  "2026-09-27T12:45:07.4210332-04:00",
+    "end":  "2026-09-27T12:45:19.6969525-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-124507-Automation-Doc.Save-6bd37a\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-124507-Automation-Doc.Save-6bd37a\\editor.log"
+}

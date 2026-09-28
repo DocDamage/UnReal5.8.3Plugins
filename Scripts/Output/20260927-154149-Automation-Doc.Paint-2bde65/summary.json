@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Paint",
+    "discovered":  10,
+    "passed":  10,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Paint\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154149-Automation-Doc.Paint-2bde65\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154149-Automation-Doc.Paint-2bde65\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "4EB52ED54EEF01B5DDC0E74723921E2251D816DFDBE25042ABABFDA748F496C4",
+    "start":  "2026-09-27T15:41:49.5311742-04:00",
+    "end":  "2026-09-27T15:42:01.7404052-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154149-Automation-Doc.Paint-2bde65\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154149-Automation-Doc.Paint-2bde65\\editor.log"
+}

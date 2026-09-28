@@ -1,0 +1,22 @@
+# Unreal generated
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+Plugins/**/Binaries/
+Plugins/**/Intermediate/
+# Test/run output: keep only each run's summary.json (small, cited by Docs/*TRACEABILITY.md
+# and DEVELOPMENT_STATUS.md). Logs, reports, package archives and gate attachments stay local.
+Scripts/Output/**
+!Scripts/Output/*/
+!Scripts/Output/*/summary.json
+
+# Per-user editor folders
+Content/Developers/

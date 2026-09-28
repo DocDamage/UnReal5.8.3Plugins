@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed",
+    "exitCode":  0,
+    "filter":  "Doc.Weather",
+    "discovered":  9,
+    "passed":  8,
+    "failed":  1,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+                        "Doc.Weather.RegionalOverride"
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Weather\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-130230-Automation-Doc.Weather-dd2be3\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-130230-Automation-Doc.Weather-dd2be3\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "67A3DFC6D8D3EA983ADFD7BCC1C2A1F51B5D87D3B9C5A07BC735FD457898EAD5",
+    "start":  "2026-09-27T13:02:30.8555710-04:00",
+    "end":  "2026-09-27T13:02:43.2241613-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-130230-Automation-Doc.Weather-dd2be3\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-130230-Automation-Doc.Weather-dd2be3\\editor.log"
+}

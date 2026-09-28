@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Passed",
+    "exitCode":  0,
+    "filter":  "Doc.Fluid",
+    "discovered":  10,
+    "passed":  10,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Fluid\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-163709-Automation-Doc.Fluid-95ed59\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-163709-Automation-Doc.Fluid-95ed59\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "D4DF9357BE5C5171BB51DAEBDC74B2373B90A2E93332BFE29BE78FEBB69B4C3A",
+    "start":  "2026-09-27T16:37:09.3329365-04:00",
+    "end":  "2026-09-27T16:37:21.4683885-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-163709-Automation-Doc.Fluid-95ed59\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-163709-Automation-Doc.Fluid-95ed59\\editor.log"
+}

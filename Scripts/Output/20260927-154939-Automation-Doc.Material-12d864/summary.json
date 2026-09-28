@@ -1,0 +1,26 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed",
+    "exitCode":  0,
+    "filter":  "Doc.Material",
+    "discovered":  10,
+    "passed":  5,
+    "failed":  5,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+                        "Doc.Material.CompetingReactions",
+                        "Doc.Material.FiniteFuel",
+                        "Doc.Material.MeltAndDryBounds",
+                        "Doc.Material.PropagationBudget",
+                        "Doc.Material.UnloadedTarget"
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Material\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154939-Automation-Doc.Material-12d864\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154939-Automation-Doc.Material-12d864\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "C1ADF440B8AFB3A3D3B0EE5EBFF956FC4CF53DC00D4BC05248E6E7C1EFE13C18",
+    "start":  "2026-09-27T15:49:40.0187883-04:00",
+    "end":  "2026-09-27T15:49:54.6514027-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154939-Automation-Doc.Material-12d864\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-154939-Automation-Doc.Material-12d864\\editor.log"
+}

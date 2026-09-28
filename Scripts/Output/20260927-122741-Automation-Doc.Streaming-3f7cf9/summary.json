@@ -1,0 +1,22 @@
+﻿{
+    "check":  "Automation",
+    "result":  "Failed (no report)",
+    "exitCode":  3,
+    "filter":  "Doc.Streaming",
+    "discovered":  0,
+    "passed":  0,
+    "failed":  0,
+    "notPassedOrFailed":  0,
+    "failedTests":  [
+
+                    ],
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" \"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -unattended -nop4 -nosplash -NullRHI -nosound -stdout -FullStdOutLogOutput -ExecCmds=\"Automation RunTests Doc.Streaming\" -TestExit=\"Automation Test Queue Empty\" -ReportExportPath=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122741-Automation-Doc.Streaming-3f7cf9\\Report\" -abslog=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122741-Automation-Doc.Streaming-3f7cf9\\editor.log\"",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "rhi":  "NullRHI (logic-only)",
+    "sourceSha256":  "6BD9792486AFF61369F017A2A65C5B59A6DEF9407A5A3C72E06442EB70EC7287",
+    "start":  "2026-09-27T12:27:41.9373270-04:00",
+    "end":  "2026-09-27T12:27:56.2119132-04:00",
+    "report":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122741-Automation-Doc.Streaming-3f7cf9\\Report",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260927-122741-Automation-Doc.Streaming-3f7cf9\\editor.log"
+}
