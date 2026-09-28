@@ -346,5 +346,11 @@ Short architecture decision records. Each notes deviations from, or choices with
 - **Reason:** `RunUAT BuildCookRun` creates file-open-order logs under `Build/Windows`. They are generated scratch, not project inputs; including them makes a successful package run appear to have a different source tree after cooking.
 - **Consequence:** Packaging and manual-gate records keep a stable source fingerprint before and after UAT runs. Packaged artifacts remain under `Scripts/Output/<run-id>/Archive/`.
 
+## D-053: Read-only Workspace Preflight
+
+- **Decision:** `Validate-Workspace.ps1` performs read-only checks of the exact engine identity and tools, host project and plugin descriptors, the Core-only feature dependency boundary, Android File Server defaults, and required verification wrappers. It writes a `summary.json` under `Scripts/Output/`.
+- **Reason:** Catch repository and environment setup errors before expensive builds while keeping static checks distinct from build, automation, asset, runtime, and package evidence.
+- **Consequence:** A passing preflight reports workspace readiness only. It cannot mark plugin behavior, runtime startup, authored assets, cooking, networking, presentation, or performance as verified.
+
 
 

@@ -24,7 +24,7 @@ Current profile: base plugins only; no bridges, editor modules, or authored cont
 | Modules 21–40 | 192 | 8 | 1 | 31 | 232 |
 | **Total** | **344** | **11** | **53** | **59** | **467** |
 
-- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-052).
+- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-053).
 
 ## Packaging & Binary Release Gates (Post-Base / Distribution)
 

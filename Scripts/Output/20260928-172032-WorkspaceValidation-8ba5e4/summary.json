@@ -1,0 +1,58 @@
+{
+  "check": "WorkspaceValidation",
+  "result": "Passed",
+  "exitCode": 0,
+  "command": ".\\Scripts\\Validate-Workspace.ps1 -EngineRoot 'C:\\Program Files\\UE_5.8'",
+  "sourceSha256": "ABC50FEDEF287516D07CC11BF0B5B36BD1ECED62210EA9B4CC553FD8BE64A358",
+  "verifierSha256": "DB06B743C359F30FDD66594EC9576CD7A9797930A15733541FAC4DFC5E4BD0ED",
+  "project": "F:\\Reusable Unreal Modules\\DocModularDev.uproject",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "start": "2026-09-28T17:20:33.6764531-04:00",
+  "end": "2026-09-28T17:20:33.9059651-04:00",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "EngineIdentity",
+      "result": "Passed",
+      "details": "Found Unreal Engine 5.8.3, CL 58210709, branch ++UE5+Release-5.8; expected 5.8.3 CL 58210709."
+    },
+    {
+      "name": "EngineTools",
+      "result": "Passed",
+      "details": "Build.bat, UnrealEditor-Cmd.exe and RunUAT.bat are present."
+    },
+    {
+      "name": "HostProject",
+      "result": "Passed",
+      "details": "Parsed F:\\Reusable Unreal Modules\\DocModularDev.uproject; EngineAssociation=5.8, modules=1. Expected association 5.8 and at least one module."
+    },
+    {
+      "name": "PluginDescriptors",
+      "result": "Passed",
+      "details": "Found 41 plugins, each with one descriptor and one Runtime module; grouping directory is descriptor-free."
+    },
+    {
+      "name": "BaseDependencyBoundary",
+      "result": "Passed",
+      "details": "No feature descriptor or Build.cs declares another DocModular feature; Core is present."
+    },
+    {
+      "name": "HostPluginSet",
+      "result": "Passed",
+      "details": "Host enables all 41 repository plugins."
+    },
+    {
+      "name": "AndroidFileServerConfig",
+      "result": "Passed",
+      "details": "SecurityToken is empty and bAllowNetworkConnection=False."
+    },
+    {
+      "name": "VerificationWrappers",
+      "result": "Passed",
+      "details": "Build, automation, suite, packaging, isolation, and manual-gate wrappers are present."
+    }
+  ]
+}

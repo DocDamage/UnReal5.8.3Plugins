@@ -1,0 +1,55 @@
+{
+  "check": "WorkspaceValidation",
+  "result": "Failed",
+  "sourceSha256": "DA8D6899C07CE408B6F07C148971DFE386CFEAB4E3B8E484A6AC593B3BB8829D",
+  "verifierSha256": "7D7FD51B9FCC5D54D2A02956CE4A0A05940C3E7D1E707A07FC276A5ED42BC50C",
+  "project": "F:\\Reusable Unreal Modules\\DocModularDev.uproject",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "start": "2026-09-28T17:17:38.5305478-04:00",
+  "end": "2026-09-28T17:17:38.8459725-04:00",
+  "passed": 7,
+  "failed": 1,
+  "checks": [
+    {
+      "name": "EngineIdentity",
+      "result": "Passed",
+      "details": "Found Unreal Engine 5.8.3, CL 58210709, branch ++UE5+Release-5.8; expected 5.8.3 CL 58210709."
+    },
+    {
+      "name": "EngineTools",
+      "result": "Passed",
+      "details": "Build.bat, UnrealEditor-Cmd.exe and RunUAT.bat are present."
+    },
+    {
+      "name": "HostProject",
+      "result": "Passed",
+      "details": "Parsed F:\\Reusable Unreal Modules\\DocModularDev.uproject; EngineAssociation=5.8, modules=1. Expected association 5.8 and at least one module."
+    },
+    {
+      "name": "PluginDescriptors",
+      "result": "Passed",
+      "details": "Found 41 plugins, each with one descriptor and one Runtime module; grouping directory is descriptor-free."
+    },
+    {
+      "name": "BaseDependencyBoundary",
+      "result": "Passed",
+      "details": "No feature descriptor or Build.cs declares another DocModular feature; Core is present."
+    },
+    {
+      "name": "HostPluginSet",
+      "result": "Passed",
+      "details": "Host enables all 41 repository plugins."
+    },
+    {
+      "name": "AndroidFileServerConfig",
+      "result": "Failed",
+      "details": "Expected an empty SecurityToken and bAllowNetworkConnection=False in Config/DefaultEngine.ini."
+    },
+    {
+      "name": "VerificationWrappers",
+      "result": "Passed",
+      "details": "Build, automation, suite, packaging, isolation, and manual-gate wrappers are present."
+    }
+  ]
+}

@@ -14,7 +14,8 @@ traceability docs (per-requirement state). This file lists remaining work only.
   behavior, and second-host portability remain unverified.
 - **Packaging:** `Scripts/Package-Host.ps1` completed one Win64 Development package run, archived the executable
   and pak, and has no manual gate fixtures. `Scripts/Record-ManualGate.ps1` has not run; manual editor fixtures
-  and cooked gates remain pending. `Validate-Workspace.ps1` and the two clean sample hosts have not been created.
+  and cooked gates remain pending. `Scripts/Validate-Workspace.ps1` passed its 8-check read-only preflight;
+  the two clean sample hosts have not been created.
 - **Version control:** `main` publishes to https://github.com/DocDamage/UnReal5.8.3Plugins. These handoff
   corrections are published together on `origin/main`.
 - **Requirement state (all three traceability docs):**
@@ -68,8 +69,8 @@ Base code exists and passes headless tests; each needs a fixture or a run type a
 ### C. Isolation, portability and cooked content (L)
 - **Compile/header isolation complete:** `Verify-PluginIsolation.ps1` passed Core-only and all 40 Core-plus-feature builds with sibling directories physically absent; each public header compiled in a separate consumer translation unit. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`.
 - Runtime startup checks, PIE behavior, bridge on/off checks and two structurally different clean sample hosts remain for portability. These cover the remaining parts of INS-07, EXP-01, MAP-12, WEA-12, SFC-12, DIA-12 (bridge part), OBJ-12, SCH-12, KNO-12, INV-12, UNL-12, UI-12 (bridge part), REL-02 and REL21-02.
-- Write `Scripts/Validate-Workspace.ps1` (planned in the status doc, not created).
-- EXP-09: content and localization load from a real cooked Win64 build (after workstream A's packaging works).
+- `Scripts/Validate-Workspace.ps1` passed its static preflight (`Scripts/Output/20260928-172032-WorkspaceValidation-8ba5e4/summary.json`); runtime startup and second-host portability remain unverified.
+- EXP-09: authored content and localization load from a real cooked Win64 build; the bare-host package run proves the pipeline only.
 
 ### D. Networking profiles (L)
 No transport exists. Requirements that need real server/client, late join or dedicated-server evidence:
@@ -103,10 +104,11 @@ profile and lists deferred work; it must not be called complete because descript
 
 ## 4. Suggested order
 
-1. Author the 11 editor fixtures, package and observe them, then record the manual cooked gates.
-2. Complete B's PIE, Blueprint and editor-run fixtures, including runtime startup checks for isolated hosts and two distinct consumer hosts.
-3. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
-4. Complete D/E for the chosen profile, then G, then H.
+1. Run runtime startup checks for the isolated hosts and build two structurally different clean consumer hosts.
+2. Author the 11 editor fixtures, package and observe them, then record the manual cooked gates.
+3. Complete B's PIE, Blueprint and editor-run fixtures.
+4. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
+5. Complete D/E for the chosen profile, then G, then H.
 
 A realistic first release is "Base profile, local-only, no bridges": it needs Section 2, C, A, B, G and the
 base parts of H. Networking and bridges can follow as separate profiles.
