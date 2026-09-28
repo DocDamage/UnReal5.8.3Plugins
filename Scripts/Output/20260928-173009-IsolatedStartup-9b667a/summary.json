@@ -1,0 +1,41 @@
+{
+  "check": "IsolatedRuntimeStartup",
+  "result": "Failed",
+  "sourceSha256": "E27F9F39B3810320D0328D8F4BBB23C534278BCA57C83AC10E525CA00F9A7275",
+  "isolationSourceSha256": "8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351",
+  "verifierSha256": "D16B5CF389D2FE95A802A77A600B89EC676D8F2EC296AFCF72A94177576E8E34",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "isolationSummary": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\summary.json",
+  "fullSuite": false,
+  "expectedPlugins": 1,
+  "completedPlugins": 1,
+  "passed": 0,
+  "failed": 1,
+  "start": "2026-09-28T17:30:10.1321990-04:00",
+  "end": "2026-09-28T17:30:10.1716374-04:00",
+  "runDirectory": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-173009-IsolatedStartup-9b667a",
+  "results": [
+    {
+      "plugin": "DocModularCore",
+      "runtimeModule": "DocModularCoreRuntime",
+      "result": "Failed",
+      "exitCode": null,
+      "reason": "Cannot find drive. A drive with the name 'Q' does not exist.",
+      "sourceSnapshotMatchesCurrent": false,
+      "presentDocModularPlugins": [
+        "DocModularCore"
+      ],
+      "loadedRuntimeModules": [],
+      "worldReachedPlay": false,
+      "cleanShutdown": false,
+      "command": null,
+      "buildProject": "Q:\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\DocIsolationHost.uproject",
+      "stagedPluginRoot": null,
+      "start": "2026-09-28T17:30:10.1494908-04:00",
+      "end": "2026-09-28T17:30:10.1636022-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-173009-IsolatedStartup-9b667a\\DocModularCore\\stdout.log"
+    }
+  ]
+}

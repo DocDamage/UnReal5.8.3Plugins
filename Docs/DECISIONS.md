@@ -352,5 +352,11 @@ Short architecture decision records. Each notes deviations from, or choices with
 - **Reason:** Catch repository and environment setup errors before expensive builds while keeping static checks distinct from build, automation, asset, runtime, and package evidence.
 - **Consequence:** A passing preflight reports workspace readiness only. It cannot mark plugin behavior, runtime startup, authored assets, cooking, networking, presentation, or performance as verified.
 
+## D-054: Isolated Runtime Startup Evidence
+
+- **Decision:** `Verify-IsolatedStartup.ps1` launches each already-built physical-absence host in headless game mode and requires the expected Runtime modules to load, an engine world to reach play, clean shutdown, and exit code zero. Before launch, it verifies that staged plugin files match the current repository sources.
+- **Reason:** Compilation and public-header isolation do not prove that plugin modules load in a game world. A bounded startup check closes that evidence gap without claiming feature behavior.
+- **Consequence:** A pass proves basic startup and teardown with the documented plugin set only. PIE behavior, feature functionality, cooked assets, bridge-present behavior, performance, and consumer-host portability require separate evidence.
+
 
 

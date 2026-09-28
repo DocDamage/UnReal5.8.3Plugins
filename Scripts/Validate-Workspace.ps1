@@ -172,9 +172,9 @@ else {
     Add-WorkspaceCheck -Name 'AndroidFileServerConfig' -Passed $false -Details "Missing $configPath"
 }
 
-$requiredScripts = @('Build-Host.ps1', 'Run-Automation.ps1', 'Verify-Suite.ps1', 'Package-Host.ps1', 'Verify-PluginIsolation.ps1', 'Record-ManualGate.ps1')
+$requiredScripts = @('Build-Host.ps1', 'Run-Automation.ps1', 'Verify-Suite.ps1', 'Package-Host.ps1', 'Verify-PluginIsolation.ps1', 'Verify-IsolatedStartup.ps1', 'Record-ManualGate.ps1')
 $missingScripts = @($requiredScripts | Where-Object { -not (Test-Path -LiteralPath (Join-Path $PSScriptRoot $_) -PathType Leaf) })
-Add-WorkspaceCheck -Name 'VerificationWrappers' -Passed ($missingScripts.Count -eq 0) -Details $(if ($missingScripts.Count -eq 0) { 'Build, automation, suite, packaging, isolation, and manual-gate wrappers are present.' } else { 'Missing: ' + ($missingScripts -join ', ') })
+Add-WorkspaceCheck -Name 'VerificationWrappers' -Passed ($missingScripts.Count -eq 0) -Details $(if ($missingScripts.Count -eq 0) { 'Build, automation, suite, packaging, isolation, startup, and manual-gate wrappers are present.' } else { 'Missing: ' + ($missingScripts -join ', ') })
 
 $end = Get-Date
 $failedCount = @($checks | Where-Object { $_.result -eq 'Failed' }).Count

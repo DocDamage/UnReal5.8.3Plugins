@@ -70,7 +70,8 @@ Engine: Unreal Engine 5.8.3, CL 58210709. Non-unity `DocIsolationHostEditor Win6
 | Total isolated hosts | Passed, 41/41; zero failed builds | `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json` |
 | Expected physical plugin set in every host | Passed; Core only or Core plus target | `presentDocModularPlugins` in the run summary |
 | Sibling descriptor dependency check | Passed; 0 sibling references | `siblingDescriptorDependencies` in the run summary |
-| Runtime startup, PIE, cooked behavior, second-host portability | Not Run | This verifier proves compile/header isolation only |
+| Runtime startup, Core-only + each Core-and-feature host | Passed, 41/41 | `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json` (runtime modules loaded; world reached play; clean shutdown; staged plugin source matched current repository source) |
+| PIE, cooked behavior, second-host portability | Not Run | Startup smoke proves module/world startup only; no feature behavior or portability beyond generated isolation hosts |
 
 The verifier writes each staged host, logs and the incremental summary under `Scripts/Output/<run-id>/`. Only the summary is intended for version control.
 

@@ -5,7 +5,7 @@
 - Branch / remote: local branch `main`, remote `origin` = https://github.com/DocDamage/UnReal5.8.3Plugins. Verification summaries identify the tested source inputs; only `summary.json` run records are intended for commits, while logs and reports stay local.
 - Worktree: `F:\Reusable Unreal Modules`. All files were created by the agent across sessions.
 - Engine: Unreal Engine 5.8.3, CL 58210709, branch `++UE5+Release-5.8`, promoted build, at `C:\Program Files\UE_5.8` (see `ENGINE_COMPATIBILITY.md`)
-- Current milestone: **All 40 gameplay modules implemented; 391/391 automated tests and 41/41 isolated compile/header builds pass. 11 requirements remain Partial because their cooked/packaged/audible part is a manual gate (see "Known issues and risks")**. All plugins across Core, Modules 1–20, Phase 9 (Modules 21, 26, 22, 30, 34), Phase 10 (Modules 28, 27, 29, 25), Phase 11 (Modules 31, 32, 33, 35), Phase 12 (Modules 23, 24, 36), and Phase 13 (Modules 37: DocReplayGhosts, 38: DocRaceTiming, 39: DocModContent, 40: DocPlaytestRecorder) are fully verified across all 4 host build targets and all 391 automated tests (0 failures).
+- Current milestone: **All 40 gameplay modules implemented; 391/391 automated tests pass; all 41 isolated hosts pass compile/header checks and headless runtime startup. 11 requirements remain Partial because their cooked/packaged/audible part is a manual gate (see "Known issues and risks")**. All plugins across Core, Modules 1–20, Phase 9 (Modules 21, 26, 22, 30, 34), Phase 10 (Modules 28, 27, 29, 25), Phase 11 (Modules 31, 32, 33, 35), Phase 12 (Modules 23, 24, 36), and Phase 13 (Modules 37: DocReplayGhosts, 38: DocRaceTiming, 39: DocModContent, 40: DocPlaytestRecorder) are fully verified across all 4 host build targets and all 391 automated tests (0 failures).
 - Capability profile: Base only (no bridges, no editor modules, no content assets)
 
 ## Completed and verified
@@ -286,12 +286,12 @@ Total: 41 plugins, 391 authored automation tests (391 verified across all 41 plu
 - example Blueprint and content assets
 - the DocObjectPool utility, DocWorldActivationISM and DocInspectionMedia
 - the network transports
-- `Verify-PluginIsolation.ps1` passed for Core-only plus all 40 features. `Validate-Workspace.ps1` now passes its read-only 8-check preflight; the two clean sample hosts have not been created. `Package-Host.ps1` completed a Development package; `Record-ManualGate.ps1` has not run.
+- `Verify-PluginIsolation.ps1` passed for Core-only plus all 40 features; `Verify-IsolatedStartup.ps1` then launched all 41 hosts successfully. `Validate-Workspace.ps1` passes its read-only 8-check preflight; the two clean sample hosts have not been created. `Package-Host.ps1` completed a Development package; `Record-ManualGate.ps1` has not run.
 
 Remaining work is organised in `Docs/HANDOFF.md`.
 
 ## Current verification
-Latest full-suite and package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`. The isolation matrix was run earlier on source SHA-256 `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`. The current worktree fingerprint is `ABC50FEDEF287516D07CC11BF0B5B36BD1ECED62210EA9B4CC553FD8BE64A358`; it includes the new workspace preflight script. The preflight passed on that current source snapshot; the older build/test/package summaries remain historical evidence for their recorded source hashes.
+Latest full-suite and package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`. The physical-absence compile matrix was run at `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`. The workspace preflight and 41-host runtime startup matrix passed on their run-time source snapshot `ABCAE2385342683F50BEFF478D4F500576E125E5BD1C4D76388F794B07E664B0`; the startup verifier also confirmed the staged plugin sources match the repository for every host. The current worktree fingerprint is `B5D2178A5C52AEDB0510EC4E720195908BFA8F756CDA367D496B39D9B9AA1A0B` after `DEPENDENCY_MATRIX.md` was updated to cite the startup run; no implementation, configuration, descriptor, or verifier script changed after those runs.
 
 | Check | Result | Command/report |
 |---|---|---|
@@ -301,12 +301,13 @@ Latest full-suite and package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B8
 | Shipping build | Passed | `Scripts/Output/20260928-170005-DocModularDev-Shipping-164490` |
 | Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-170007-Automation-Doc-eee4f4` |
 | Development Win64 cook/package | Passed; standalone executable and pak archived | `Scripts/Output/20260928-170040-Package-Win64-Development-62eadc/summary.json` |
-| Workspace structural and engine preflight | Passed (8/8 checks; static/read-only only) | `Scripts/Output/20260928-172032-WorkspaceValidation-8ba5e4/summary.json` |
+| Workspace structural and engine preflight | Passed (8/8 checks; static/read-only only) | `Scripts/Output/20260928-174042-WorkspaceValidation-5ba0d3/summary.json` |
 | Shipping cook/package | Not Run | `Scripts/Package-Host.ps1` supports Shipping; only Development was packaged |
 | Isolated dependency hosts (Core-only + one feature per host) | Passed (41/41) | `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json` |
+| Isolated runtime startup (Core-only + one feature per host) | Passed (41/41; source snapshots matched) | `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json` |
 | Cooked / packaged / audible / rendered manual gates | Not Run | 11 rows listed under "Known issues and risks" |
 
-The package contains no authored gate fixtures; it proves that the Win64 Development build/cook/stage/pak/archive pipeline runs, not that any manual gate passes. The isolated result proves compile-time and public-header separation only. It does not prove runtime startup, PIE behavior, or portability to a second consumer project.
+The package contains no authored gate fixtures; it proves that the Win64 Development build/cook/stage/pak/archive pipeline runs, not that any manual gate passes. The isolated startup result proves expected runtime modules load, an engine world reaches play, and shutdown completes with each sibling absent. It does not prove feature behavior, PIE behavior, or portability to a second consumer project.
 
 ### Run record, 2026-09-28 audit-and-fix pass
 Every run of the day is listed, including failures. Each "Verify-Suite" run is 4 builds followed by the full `Doc.*` automation.
@@ -337,12 +338,17 @@ Every run of the day is listed, including failures. Each "Verify-Suite" run is 4
 | `20260928-170040-Package-Win64-Development-62eadc` | **Passed** | Win64 Development BuildCookRun | Archived `DocModularDev.exe` and one `.pak`; source fingerprint remained stable after UAT generated `Build/` scratch |
 | `20260928-171736-WorkspaceValidation-0b111c` | Failed (7/8) | Static workspace preflight | Initial config parser consumed the next INI row as the empty `SecurityToken`; corrected before rerun |
 | `20260928-171800-WorkspaceValidation-248422` | Passed (8/8) | Static workspace preflight | Corrected INI parsing; superseded after adding command and exit-code fields to the summary |
-| `20260928-172032-WorkspaceValidation-8ba5e4` | **Passed (8/8)** | Static workspace preflight | Final summary records command, exit code, engine identity, source SHA and all check details; source SHA `ABC50FEDEF287516D07CC11BF0B5B36BD1ECED62210EA9B4CC553FD8BE64A358` |
+| `20260928-172032-WorkspaceValidation-8ba5e4` | Passed (8/8) | Static workspace preflight | Superseded after adding the startup wrapper and checking it in preflight |
+| `20260928-173009-IsolatedStartup-9b667a` / `20260928-173043-IsolatedStartup-4b9185` | Failed before launch | Startup wrapper path resolution | Old isolation summaries retain the temporary subst drive in `buildProject`; corrected by resolving hosts through `runDirectory` |
+| `20260928-173116-IsolatedStartup-b22cdb` / `20260928-173141-IsolatedStartup-d08c60` | Passed 1/1 each | Core-only / DocInteraction | Proved launch arguments, source snapshot comparison, expected-module log checks, world start, and clean shutdown |
+| `20260928-173204-IsolatedStartup-d2a072` | Passed 41/41 | Core-only + each feature | First full startup matrix; superseded after adding top-level command and exit-code fields |
+| `20260928-174042-WorkspaceValidation-5ba0d3` | **Passed 8/8** | Static workspace preflight | Required verification wrappers present; source SHA `ABCAE2385342683F50BEFF478D4F500576E125E5BD1C4D76388F794B07E664B0` |
+| `20260928-174055-IsolatedStartup-c9a914` | **Passed 41/41** | Core-only + each feature, headless game mode | Every staged source snapshot matched the repository; expected runtime modules loaded; world start and clean shutdown; exit code 0; source SHA `ABCAE2385342683F50BEFF478D4F500576E125E5BD1C4D76388F794B07E664B0` |
 
 ## Known issues and risks
 - **Native execution resolved**: The PowerShell scripts run directly on the host machine.
 - **Full compilation passed**: All 41 plugins compiled successfully across unity, non-unity (`-DisableUnity`), Game Development, and Game Shipping configurations.
-- **Plugin isolation passed**: Core alone and Core plus each of the 40 features compiled with every sibling plugin directory absent. Each public header compiled in an external consumer translation unit. Runtime startup and second-host portability remain unverified.
+- **Plugin isolation passed**: Core alone and Core plus each of the 40 features compiled with every sibling plugin directory absent. Each public header compiled in an external consumer translation unit. Headless runtime startup passed for all 41 hosts. Feature behavior, PIE and second-host portability remain unverified.
 - **Development package pipeline passed**: UAT built, cooked, staged, pak'd and archived the host; the archived executable and `.pak` exist. The run has no manual gate fixtures, so all 11 cooked/visual/audible requirement gates remain pending.
 - **Workspace preflight passed**: repository structure, engine identity/tools, 41 plugin descriptors, sibling-dependency declarations, host plugin set, Android File Server defaults, and verification wrappers passed 8/8 static checks. This does not establish any build, runtime, asset, or cooked behavior.
 - **Engine APIs verified**: Core engine APIs compile cleanly against UE 5.8.3.
@@ -361,9 +367,9 @@ Traceability: `Docs/EXPANSION_TRACEABILITY.md` (Modules 11–20) and `Docs/MODUL
 All 40 modular gameplay plugins and Core are implemented; 391/391 automated tests and all 41 isolated compile/header builds pass. 11 requirements are Partial pending manual cooked gates.
 
 ## Exact next task
-**Objective:** Establish isolated-host runtime startup and two-host portability, then complete editor-only cooked gates.
-Completed: `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus all 40 features with physical sibling absence (41/41); `Scripts/Package-Host.ps1` produced a Development Win64 archive; `Scripts/Validate-Workspace.ps1` passed 8/8 read-only preflight checks. Evidence is in the cited summaries.
+**Objective:** Establish two-host portability, then complete editor-only cooked gates.
+Completed: `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus all 40 features with physical sibling absence (41/41); `Scripts/Verify-IsolatedStartup.ps1` launched all 41 hosts with expected runtime modules, world startup and clean shutdown; `Scripts/Package-Host.ps1` produced a Development Win64 archive; `Scripts/Validate-Workspace.ps1` passed 8/8 read-only preflight checks. Evidence is in the cited summaries.
 Next tasks:
-1. Run runtime startup checks for the isolated hosts and establish two structurally different clean consumer hosts.
+1. Establish two structurally different clean consumer hosts, including a non-Character interaction participant.
 2. Have the required fixtures authored in Unreal Editor, then observe and record the 11 gates from `Docs/MANUAL_GATES.md` with `Scripts/Record-ManualGate.ps1`.
 3. Continue with the PIE, Blueprint, network, bridge, profiling and release work tracked in `Docs/HANDOFF.md`.

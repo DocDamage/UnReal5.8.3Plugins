@@ -9,9 +9,10 @@ traceability docs (per-requirement state). This file lists remaining work only.
   Each plugin depends only on DocModularCore and engine modules.
 - **Verified:** all four host builds and the full automation suite (391/391) in the 2026-09-28 run series;
   latest full-suite and Development package source SHA-256 `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`.
-- **Isolation:** Core-only plus all 40 Core-and-feature hosts passed non-unity physical-absence builds (41/41);
-  evidence is `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`. Runtime startup, PIE, cooked
-  behavior, and second-host portability remain unverified.
+- **Isolation:** Core-only plus all 40 Core-and-feature hosts passed non-unity physical-absence builds (41/41)
+  and headless game-mode startup (41/41). Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`
+  and `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`. Feature behavior, PIE, cooked behavior,
+  and second-host portability remain unverified.
 - **Packaging:** `Scripts/Package-Host.ps1` completed one Win64 Development package run, archived the executable
   and pak, and has no manual gate fixtures. `Scripts/Record-ManualGate.ps1` has not run; manual editor fixtures
   and cooked gates remain pending. `Scripts/Validate-Workspace.ps1` passed its 8-check read-only preflight;
@@ -22,8 +23,8 @@ traceability docs (per-requirement state). This file lists remaining work only.
 
 | Doc | Verified | Partial (manual gate) | In Progress | Not Started | Untraced |
 |---|---|---|---|---|---|
-| `REQUIREMENTS_TRACEABILITY.md` (Modules 1–10, 87 IDs) | 58 | 0 | 18 | 11 | 0 |
-| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 94 | 3 | 34 | 17 | 0 |
+| `REQUIREMENTS_TRACEABILITY.md` (Modules 1–10, 87 IDs) | 59 | 0 | 17 | 11 | 0 |
+| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 95 | 3 | 33 | 17 | 0 |
 | `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 192 | 8 | 1 | 31 | 0 |
 
 The automated base logic and compile-time physical-absence checks are complete. What remains includes
@@ -36,8 +37,8 @@ networking, bridges between plugins, performance measurement, and release paperw
    host builds and 391/391 tests. This includes the INV-11 delta-trim assertions.
 2. **Android File Server config:** `SecurityToken` is empty and `bAllowNetworkConnection=False` in
    `Config/DefaultEngine.ini`; no generated token is stored in the current config.
-3. **Release checklist:** updated with the current build/test evidence, incomplete traceability counts, and
-   unchecked sibling-isolation gate.
+3. **Release checklist:** updated with build/test evidence and incomplete traceability counts; the then-pending
+   isolation gate was closed by the later 41-host compile/header and startup runs cited above.
 4. **Traceability:** added CROSS21-01..20 and REL21-01..12 from handoff Sections 23.7 and 37 as Not Started.
 5. **Publication:** these follow-up corrections were committed and pushed to `origin/main` as one changeset.
 6. **Isolation:** `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus each feature with every sibling directory absent (41/41 passed); the dependency matrix and affected traceability rows now cite that run.
@@ -68,8 +69,8 @@ Base code exists and passes headless tests; each needs a fixture or a run type a
 
 ### C. Isolation, portability and cooked content (L)
 - **Compile/header isolation complete:** `Verify-PluginIsolation.ps1` passed Core-only and all 40 Core-plus-feature builds with sibling directories physically absent; each public header compiled in a separate consumer translation unit. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`.
-- Runtime startup checks, PIE behavior, bridge on/off checks and two structurally different clean sample hosts remain for portability. These cover the remaining parts of INS-07, EXP-01, MAP-12, WEA-12, SFC-12, DIA-12 (bridge part), OBJ-12, SCH-12, KNO-12, INV-12, UNL-12, UI-12 (bridge part), REL-02 and REL21-02.
-- `Scripts/Validate-Workspace.ps1` passed its static preflight (`Scripts/Output/20260928-172032-WorkspaceValidation-8ba5e4/summary.json`); runtime startup and second-host portability remain unverified.
+- **Headless runtime startup complete:** `Verify-IsolatedStartup.ps1` launched Core-only and all 40 Core-plus-feature hosts (41/41); expected runtime modules loaded, a world reached play, and each process shut down cleanly. Evidence: `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`. Feature behavior, PIE, bridge-on tests and two structurally different clean sample hosts remain. The startup evidence closes INS-07 and EXP-01; performance rows and REL-02/REL21-02 stay open for their other acceptance criteria.
+- `Scripts/Validate-Workspace.ps1` passed its static preflight (`Scripts/Output/20260928-174042-WorkspaceValidation-5ba0d3/summary.json`); second-host portability remains unverified.
 - EXP-09: authored content and localization load from a real cooked Win64 build; the bare-host package run proves the pipeline only.
 
 ### D. Networking profiles (L)
@@ -104,7 +105,7 @@ profile and lists deferred work; it must not be called complete because descript
 
 ## 4. Suggested order
 
-1. Run runtime startup checks for the isolated hosts and build two structurally different clean consumer hosts.
+1. Build two structurally different clean consumer hosts for portability, including a non-Character interaction participant.
 2. Author the 11 editor fixtures, package and observe them, then record the manual cooked gates.
 3. Complete B's PIE, Blueprint and editor-run fixtures.
 4. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.

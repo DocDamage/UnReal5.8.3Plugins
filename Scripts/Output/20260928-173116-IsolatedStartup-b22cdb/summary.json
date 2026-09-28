@@ -1,0 +1,46 @@
+{
+  "check": "IsolatedRuntimeStartup",
+  "result": "Passed",
+  "sourceSha256": "B8FEDE56183EDED11F4F4EDC9324150207F89CCC778CB620D1361BD4AB9BD537",
+  "isolationSourceSha256": "8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351",
+  "verifierSha256": "C570FB03859680187B8B52D397DF6CA6C2703444C3763779BBB3FDC962217854",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "isolationSummary": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\summary.json",
+  "fullSuite": false,
+  "expectedPlugins": 1,
+  "completedPlugins": 1,
+  "passed": 1,
+  "failed": 0,
+  "start": "2026-09-28T17:31:17.7664644-04:00",
+  "end": "2026-09-28T17:31:26.3960870-04:00",
+  "runDirectory": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-173116-IsolatedStartup-b22cdb",
+  "results": [
+    {
+      "plugin": "DocModularCore",
+      "runtimeModule": "DocModularCoreRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\Plugins\\DocModular",
+      "start": "2026-09-28T17:31:17.7834452-04:00",
+      "end": "2026-09-28T17:31:26.3883305-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-173116-IsolatedStartup-b22cdb\\DocModularCore\\stdout.log"
+    }
+  ]
+}

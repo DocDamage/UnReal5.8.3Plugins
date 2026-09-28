@@ -1,0 +1,1248 @@
+{
+  "check": "IsolatedRuntimeStartup",
+  "result": "Passed",
+  "exitCode": 0,
+  "command": ".\\Scripts\\Verify-IsolatedStartup.ps1 -EngineRoot 'C:\\Program Files\\UE_5.8' -IsolationSummary '.\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\summary.json'",
+  "sourceSha256": "ABCAE2385342683F50BEFF478D4F500576E125E5BD1C4D76388F794B07E664B0",
+  "isolationSourceSha256": "8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351",
+  "verifierSha256": "1FA9E8BEB0A97B3DD08B220E85A4C37D7061B74D9C2145CEFE56F7E0D58294E5",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "isolationSummary": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\summary.json",
+  "fullSuite": true,
+  "expectedPlugins": 41,
+  "completedPlugins": 41,
+  "passed": 41,
+  "failed": 0,
+  "start": "2026-09-28T17:40:56.4370973-04:00",
+  "end": "2026-09-28T17:47:32.3044283-04:00",
+  "runDirectory": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914",
+  "results": [
+    {
+      "plugin": "DocModularCore",
+      "runtimeModule": "DocModularCoreRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\Plugins\\DocModular",
+      "start": "2026-09-28T17:40:56.4645333-04:00",
+      "end": "2026-09-28T17:41:04.8430833-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocModularCore\\stdout.log"
+    },
+    {
+      "plugin": "DocAcousticSpaces",
+      "runtimeModule": "DocAcousticSpacesRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocAcousticSpaces"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocAcousticSpacesRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAcousticSpaces\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAcousticSpaces\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAcousticSpaces\\Plugins\\DocModular",
+      "start": "2026-09-28T17:41:04.8479874-04:00",
+      "end": "2026-09-28T17:41:16.6434445-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocAcousticSpaces\\stdout.log"
+    },
+    {
+      "plugin": "DocAdaptiveAudio",
+      "runtimeModule": "DocAdaptiveAudioRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocAdaptiveAudio"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocAdaptiveAudioRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAdaptiveAudio\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAdaptiveAudio\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAdaptiveAudio\\Plugins\\DocModular",
+      "start": "2026-09-28T17:41:16.6447303-04:00",
+      "end": "2026-09-28T17:41:25.1272994-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocAdaptiveAudio\\stdout.log"
+    },
+    {
+      "plugin": "DocAssemblyMaintenance",
+      "runtimeModule": "DocAssemblyMaintenanceRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocAssemblyMaintenance"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocAssemblyMaintenanceRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAssemblyMaintenance\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAssemblyMaintenance\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocAssemblyMaintenance\\Plugins\\DocModular",
+      "start": "2026-09-28T17:41:25.1413695-04:00",
+      "end": "2026-09-28T17:41:34.3840479-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocAssemblyMaintenance\\stdout.log"
+    },
+    {
+      "plugin": "DocBroadcastChannels",
+      "runtimeModule": "DocBroadcastChannelsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocBroadcastChannels"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocBroadcastChannelsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocBroadcastChannels\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocBroadcastChannels\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocBroadcastChannels\\Plugins\\DocModular",
+      "start": "2026-09-28T17:41:34.3859236-04:00",
+      "end": "2026-09-28T17:41:44.3852050-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocBroadcastChannels\\stdout.log"
+    },
+    {
+      "plugin": "DocDialogue",
+      "runtimeModule": "DocDialogueRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocDialogue"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocDialogueRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocDialogue\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocDialogue\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocDialogue\\Plugins\\DocModular",
+      "start": "2026-09-28T17:41:44.3874733-04:00",
+      "end": "2026-09-28T17:41:54.5107548-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocDialogue\\stdout.log"
+    },
+    {
+      "plugin": "DocEvents",
+      "runtimeModule": "DocEventsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocEvents"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocEventsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocEvents\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocEvents\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocEvents\\Plugins\\DocModular",
+      "start": "2026-09-28T17:41:54.5117923-04:00",
+      "end": "2026-09-28T17:42:06.1729316-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocEvents\\stdout.log"
+    },
+    {
+      "plugin": "DocEvidenceDeduction",
+      "runtimeModule": "DocEvidenceDeductionRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocEvidenceDeduction"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocEvidenceDeductionRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocEvidenceDeduction\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocEvidenceDeduction\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocEvidenceDeduction\\Plugins\\DocModular",
+      "start": "2026-09-28T17:42:06.1740412-04:00",
+      "end": "2026-09-28T17:42:15.9973267-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocEvidenceDeduction\\stdout.log"
+    },
+    {
+      "plugin": "DocFluidNetworks",
+      "runtimeModule": "DocFluidNetworksRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocFluidNetworks"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocFluidNetworksRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocFluidNetworks\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocFluidNetworks\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocFluidNetworks\\Plugins\\DocModular",
+      "start": "2026-09-28T17:42:15.9986128-04:00",
+      "end": "2026-09-28T17:42:24.8574410-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocFluidNetworks\\stdout.log"
+    },
+    {
+      "plugin": "DocGameFrameworkUI",
+      "runtimeModule": "DocGameFrameworkUIRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocGameFrameworkUI"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocGameFrameworkUIRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocGameFrameworkUI\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocGameFrameworkUI\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocGameFrameworkUI\\Plugins\\DocModular",
+      "start": "2026-09-28T17:42:24.8584029-04:00",
+      "end": "2026-09-28T17:42:34.8628296-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocGameFrameworkUI\\stdout.log"
+    },
+    {
+      "plugin": "DocGestureRecognition",
+      "runtimeModule": "DocGestureRecognitionRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocGestureRecognition"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocGestureRecognitionRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocGestureRecognition\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocGestureRecognition\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocGestureRecognition\\Plugins\\DocModular",
+      "start": "2026-09-28T17:42:34.8638773-04:00",
+      "end": "2026-09-28T17:42:44.9143568-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocGestureRecognition\\stdout.log"
+    },
+    {
+      "plugin": "DocInspection",
+      "runtimeModule": "DocInspectionRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocInspection"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocInspectionRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInspection\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInspection\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInspection\\Plugins\\DocModular",
+      "start": "2026-09-28T17:42:44.9159091-04:00",
+      "end": "2026-09-28T17:42:53.9405141-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocInspection\\stdout.log"
+    },
+    {
+      "plugin": "DocInteraction",
+      "runtimeModule": "DocInteractionRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocInteraction"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocInteractionRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInteraction\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInteraction\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInteraction\\Plugins\\DocModular",
+      "start": "2026-09-28T17:42:53.9416168-04:00",
+      "end": "2026-09-28T17:43:03.1188774-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocInteraction\\stdout.log"
+    },
+    {
+      "plugin": "DocInventoryItems",
+      "runtimeModule": "DocInventoryItemsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocInventoryItems"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocInventoryItemsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInventoryItems\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInventoryItems\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocInventoryItems\\Plugins\\DocModular",
+      "start": "2026-09-28T17:43:03.1200288-04:00",
+      "end": "2026-09-28T17:43:12.9184482-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocInventoryItems\\stdout.log"
+    },
+    {
+      "plugin": "DocKnowledgeCodex",
+      "runtimeModule": "DocKnowledgeCodexRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocKnowledgeCodex"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocKnowledgeCodexRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocKnowledgeCodex\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocKnowledgeCodex\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocKnowledgeCodex\\Plugins\\DocModular",
+      "start": "2026-09-28T17:43:12.9195298-04:00",
+      "end": "2026-09-28T17:43:24.4844263-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocKnowledgeCodex\\stdout.log"
+    },
+    {
+      "plugin": "DocMapNavigation",
+      "runtimeModule": "DocMapNavigationRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocMapNavigation"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocMapNavigationRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMapNavigation\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMapNavigation\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMapNavigation\\Plugins\\DocModular",
+      "start": "2026-09-28T17:43:24.4860528-04:00",
+      "end": "2026-09-28T17:43:33.1714267-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocMapNavigation\\stdout.log"
+    },
+    {
+      "plugin": "DocMaterialReactions",
+      "runtimeModule": "DocMaterialReactionsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocMaterialReactions"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocMaterialReactionsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMaterialReactions\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMaterialReactions\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMaterialReactions\\Plugins\\DocModular",
+      "start": "2026-09-28T17:43:33.1726279-04:00",
+      "end": "2026-09-28T17:43:42.3387030-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocMaterialReactions\\stdout.log"
+    },
+    {
+      "plugin": "DocMechanicalNetworks",
+      "runtimeModule": "DocMechanicalNetworksRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocMechanicalNetworks"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocMechanicalNetworksRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMechanicalNetworks\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMechanicalNetworks\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocMechanicalNetworks\\Plugins\\DocModular",
+      "start": "2026-09-28T17:43:42.3399494-04:00",
+      "end": "2026-09-28T17:43:54.6946330-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocMechanicalNetworks\\stdout.log"
+    },
+    {
+      "plugin": "DocModContent",
+      "runtimeModule": "DocModContentRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocModContent"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocModContentRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModContent\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModContent\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModContent\\Plugins\\DocModular",
+      "start": "2026-09-28T17:43:54.6962266-04:00",
+      "end": "2026-09-28T17:44:03.4768375-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocModContent\\stdout.log"
+    },
+    {
+      "plugin": "DocNPCSchedules",
+      "runtimeModule": "DocNPCSchedulesRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocNPCSchedules"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocNPCSchedulesRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocNPCSchedules\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocNPCSchedules\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocNPCSchedules\\Plugins\\DocModular",
+      "start": "2026-09-28T17:44:03.4785008-04:00",
+      "end": "2026-09-28T17:44:14.0518581-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocNPCSchedules\\stdout.log"
+    },
+    {
+      "plugin": "DocOpticalBeams",
+      "runtimeModule": "DocOpticalBeamsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocOpticalBeams"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocOpticalBeamsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocOpticalBeams\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocOpticalBeams\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocOpticalBeams\\Plugins\\DocModular",
+      "start": "2026-09-28T17:44:14.0536798-04:00",
+      "end": "2026-09-28T17:44:29.7902512-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocOpticalBeams\\stdout.log"
+    },
+    {
+      "plugin": "DocPhotography",
+      "runtimeModule": "DocPhotographyRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocPhotography"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocPhotographyRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPhotography\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPhotography\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPhotography\\Plugins\\DocModular",
+      "start": "2026-09-28T17:44:29.7915376-04:00",
+      "end": "2026-09-28T17:44:41.4144969-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocPhotography\\stdout.log"
+    },
+    {
+      "plugin": "DocPlaytestRecorder",
+      "runtimeModule": "DocPlaytestRecorderRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocPlaytestRecorder"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocPlaytestRecorderRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPlaytestRecorder\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPlaytestRecorder\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPlaytestRecorder\\Plugins\\DocModular",
+      "start": "2026-09-28T17:44:41.4158280-04:00",
+      "end": "2026-09-28T17:44:51.1490094-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocPlaytestRecorder\\stdout.log"
+    },
+    {
+      "plugin": "DocPowerNetworks",
+      "runtimeModule": "DocPowerNetworksRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocPowerNetworks"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocPowerNetworksRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPowerNetworks\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPowerNetworks\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPowerNetworks\\Plugins\\DocModular",
+      "start": "2026-09-28T17:44:51.1505476-04:00",
+      "end": "2026-09-28T17:44:59.7818454-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocPowerNetworks\\stdout.log"
+    },
+    {
+      "plugin": "DocPuzzleMechanisms",
+      "runtimeModule": "DocPuzzleMechanismsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocPuzzleMechanisms"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocPuzzleMechanismsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPuzzleMechanisms\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPuzzleMechanisms\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocPuzzleMechanisms\\Plugins\\DocModular",
+      "start": "2026-09-28T17:44:59.7836215-04:00",
+      "end": "2026-09-28T17:45:08.5939589-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocPuzzleMechanisms\\stdout.log"
+    },
+    {
+      "plugin": "DocQuestObjectives",
+      "runtimeModule": "DocQuestObjectivesRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocQuestObjectives"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocQuestObjectivesRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocQuestObjectives\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocQuestObjectives\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocQuestObjectives\\Plugins\\DocModular",
+      "start": "2026-09-28T17:45:08.5957442-04:00",
+      "end": "2026-09-28T17:45:18.7013708-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocQuestObjectives\\stdout.log"
+    },
+    {
+      "plugin": "DocRaceTiming",
+      "runtimeModule": "DocRaceTimingRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocRaceTiming"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocRaceTimingRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRaceTiming\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRaceTiming\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRaceTiming\\Plugins\\DocModular",
+      "start": "2026-09-28T17:45:18.7151853-04:00",
+      "end": "2026-09-28T17:45:28.5785726-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocRaceTiming\\stdout.log"
+    },
+    {
+      "plugin": "DocRegions",
+      "runtimeModule": "DocRegionsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocRegions"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocRegionsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRegions\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRegions\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRegions\\Plugins\\DocModular",
+      "start": "2026-09-28T17:45:28.5803043-04:00",
+      "end": "2026-09-28T17:45:37.6926344-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocRegions\\stdout.log"
+    },
+    {
+      "plugin": "DocReplayGhosts",
+      "runtimeModule": "DocReplayGhostsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocReplayGhosts"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocReplayGhostsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocReplayGhosts\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocReplayGhosts\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocReplayGhosts\\Plugins\\DocModular",
+      "start": "2026-09-28T17:45:37.6953915-04:00",
+      "end": "2026-09-28T17:45:46.6437758-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocReplayGhosts\\stdout.log"
+    },
+    {
+      "plugin": "DocRhythmChallenges",
+      "runtimeModule": "DocRhythmChallengesRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocRhythmChallenges"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocRhythmChallengesRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRhythmChallenges\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRhythmChallenges\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocRhythmChallenges\\Plugins\\DocModular",
+      "start": "2026-09-28T17:45:46.6486570-04:00",
+      "end": "2026-09-28T17:45:54.8345617-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocRhythmChallenges\\stdout.log"
+    },
+    {
+      "plugin": "DocSave",
+      "runtimeModule": "DocSaveRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocSave"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocSaveRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSave\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSave\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSave\\Plugins\\DocModular",
+      "start": "2026-09-28T17:45:54.8368003-04:00",
+      "end": "2026-09-28T17:46:03.5810421-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocSave\\stdout.log"
+    },
+    {
+      "plugin": "DocSequences",
+      "runtimeModule": "DocSequencesRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocSequences"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocSequencesRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSequences\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSequences\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSequences\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:03.5828451-04:00",
+      "end": "2026-09-28T17:46:12.4544905-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocSequences\\stdout.log"
+    },
+    {
+      "plugin": "DocServiceQueues",
+      "runtimeModule": "DocServiceQueuesRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocServiceQueues"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocServiceQueuesRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocServiceQueues\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocServiceQueues\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocServiceQueues\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:12.4564309-04:00",
+      "end": "2026-09-28T17:46:21.1785792-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocServiceQueues\\stdout.log"
+    },
+    {
+      "plugin": "DocStreaming",
+      "runtimeModule": "DocStreamingRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocStreaming"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocStreamingRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocStreaming\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocStreaming\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocStreaming\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:21.1802381-04:00",
+      "end": "2026-09-28T17:46:30.7440100-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocStreaming\\stdout.log"
+    },
+    {
+      "plugin": "DocSurfaceFeedback",
+      "runtimeModule": "DocSurfaceFeedbackRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocSurfaceFeedback"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocSurfaceFeedbackRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSurfaceFeedback\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSurfaceFeedback\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSurfaceFeedback\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:30.7457082-04:00",
+      "end": "2026-09-28T17:46:39.3381694-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocSurfaceFeedback\\stdout.log"
+    },
+    {
+      "plugin": "DocSurfacePainting",
+      "runtimeModule": "DocSurfacePaintingRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocSurfacePainting"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocSurfacePaintingRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSurfacePainting\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSurfacePainting\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocSurfacePainting\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:39.3400602-04:00",
+      "end": "2026-09-28T17:46:48.0317335-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocSurfacePainting\\stdout.log"
+    },
+    {
+      "plugin": "DocTime",
+      "runtimeModule": "DocTimeRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocTime"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocTimeRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocTime\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocTime\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocTime\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:48.0342566-04:00",
+      "end": "2026-09-28T17:46:56.7503706-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocTime\\stdout.log"
+    },
+    {
+      "plugin": "DocUnlocksProgression",
+      "runtimeModule": "DocUnlocksProgressionRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocUnlocksProgression"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocUnlocksProgressionRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocUnlocksProgression\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocUnlocksProgression\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocUnlocksProgression\\Plugins\\DocModular",
+      "start": "2026-09-28T17:46:56.7520341-04:00",
+      "end": "2026-09-28T17:47:05.3657771-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocUnlocksProgression\\stdout.log"
+    },
+    {
+      "plugin": "DocWeather",
+      "runtimeModule": "DocWeatherRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocWeather"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocWeatherRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWeather\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWeather\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWeather\\Plugins\\DocModular",
+      "start": "2026-09-28T17:47:05.3675847-04:00",
+      "end": "2026-09-28T17:47:13.9971532-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocWeather\\stdout.log"
+    },
+    {
+      "plugin": "DocWorldActivation",
+      "runtimeModule": "DocWorldActivationRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocWorldActivation"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocWorldActivationRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWorldActivation\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWorldActivation\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWorldActivation\\Plugins\\DocModular",
+      "start": "2026-09-28T17:47:13.9989455-04:00",
+      "end": "2026-09-28T17:47:22.6008130-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocWorldActivation\\stdout.log"
+    },
+    {
+      "plugin": "DocWorldTerminals",
+      "runtimeModule": "DocWorldTerminalsRuntime",
+      "result": "Passed",
+      "exitCode": 0,
+      "reason": null,
+      "sourceSnapshotMatchesCurrent": true,
+      "presentDocModularPlugins": [
+        "DocModularCore",
+        "DocWorldTerminals"
+      ],
+      "loadedRuntimeModules": [
+        {
+          "name": "DocModularCoreRuntime",
+          "loaded": true
+        },
+        {
+          "name": "DocWorldTerminalsRuntime",
+          "loaded": true
+        }
+      ],
+      "worldReachedPlay": true,
+      "cleanShutdown": true,
+      "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" -project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWorldTerminals\\DocIsolationHost.uproject\" -game -nullrhi -nosound -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput -ExecCmds=Quit",
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWorldTerminals\\DocIsolationHost.uproject",
+      "stagedPluginRoot": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocWorldTerminals\\Plugins\\DocModular",
+      "start": "2026-09-28T17:47:22.6026192-04:00",
+      "end": "2026-09-28T17:47:32.2991720-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-174055-IsolatedStartup-c9a914\\DocWorldTerminals\\stdout.log"
+    }
+  ]
+}

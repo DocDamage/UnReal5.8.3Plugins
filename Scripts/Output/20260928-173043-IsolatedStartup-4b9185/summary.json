@@ -1,0 +1,41 @@
+{
+  "check": "IsolatedRuntimeStartup",
+  "result": "Failed",
+  "sourceSha256": "7C1FEE66C6E2473605640833AB68F7320B627F635F39F2D72B60A31C6AF16594",
+  "isolationSourceSha256": "8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351",
+  "verifierSha256": "C258E26ACF71155A875279001332D95C2EF732FA04BD2D1E5CFB13FD01E625D2",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "isolationSummary": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\summary.json",
+  "fullSuite": false,
+  "expectedPlugins": 1,
+  "completedPlugins": 1,
+  "passed": 0,
+  "failed": 1,
+  "start": "2026-09-28T17:30:44.0139303-04:00",
+  "end": "2026-09-28T17:30:44.1066831-04:00",
+  "runDirectory": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-173043-IsolatedStartup-4b9185",
+  "results": [
+    {
+      "plugin": "DocModularCore",
+      "runtimeModule": "DocModularCoreRuntime",
+      "result": "Failed",
+      "exitCode": null,
+      "reason": "A parameter cannot be found that matches parameter name 'Raw'.",
+      "sourceSnapshotMatchesCurrent": false,
+      "presentDocModularPlugins": [
+        "DocModularCore"
+      ],
+      "loadedRuntimeModules": [],
+      "worldReachedPlay": false,
+      "cleanShutdown": false,
+      "command": null,
+      "buildProject": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-152202-PluginIsolation-1b0a78\\DocModularCore\\DocIsolationHost.uproject",
+      "stagedPluginRoot": null,
+      "start": "2026-09-28T17:30:44.0333989-04:00",
+      "end": "2026-09-28T17:30:44.0989922-04:00",
+      "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-173043-IsolatedStartup-4b9185\\DocModularCore\\stdout.log"
+    }
+  ]
+}

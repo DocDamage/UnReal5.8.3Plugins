@@ -12,19 +12,19 @@ Current profile: base plugins only; no bridges, editor modules, or authored cont
   - Game Development: `Scripts/Output/20260928-170002-DocModularDev-Development-70ecee`
   - Game Shipping: `Scripts/Output/20260928-170005-DocModularDev-Shipping-164490`
 - [x] **No Editor Dependency Leakage**: Runtime modules compiled in Game Development and Game Shipping configurations (see the build evidence above).
-- [x] **Zero Sibling Plugin Coupling**: Core-only and Core-plus-one-feature non-unity builds passed for all 40 features with every sibling directory absent. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`. This gate covers compilation and public-header isolation; runtime startup and second-host portability remain open.
+- [x] **Zero Sibling Plugin Coupling**: Core-only and Core-plus-one-feature non-unity builds passed for all 40 features with every sibling directory absent; all 41 hosts also passed headless game-mode runtime startup. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json` and `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`. This gate covers compile/header independence and basic startup; second-host portability remains open.
 - [x] **Full Automated Test Suite**: All 391 `Doc.*` tests passed, with 0 failures: `Scripts/Output/20260928-170007-Automation-Doc-eee4f4`.
-- Latest full-suite and Development package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`. The isolation matrix summary records its earlier source snapshot `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`. Subsequent edits update only status wording in documentation; no implementation, configuration, descriptor, or build-script inputs changed.
-- [ ] **Complete Requirement Traceability**: 344 of 467 requirement IDs are Verified; 11 are Partial, 53 In Progress, and 59 Not Started.
+- Full-suite and Development package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`. Physical-absence compile matrix source SHA-256: `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`. Current workspace preflight and isolated runtime startup source SHA-256: `ABCAE2385342683F50BEFF478D4F500576E125E5BD1C4D76388F794B07E664B0`. The later source additions are verification wrappers; plugin implementation, project configuration, and descriptors remain the same as the full suite/package snapshot.
+- [ ] **Complete Requirement Traceability**: 346 of 467 requirement IDs are Verified; 11 are Partial, 51 In Progress, and 59 Not Started.
 
 | Scope | Verified | Partial | In Progress | Not Started | Total |
 |---|---:|---:|---:|---:|---:|
-| Modules 1–10 | 58 | 0 | 18 | 11 | 87 |
-| Modules 11–20 | 94 | 3 | 34 | 17 | 148 |
+| Modules 1–10 | 59 | 0 | 17 | 11 | 87 |
+| Modules 11–20 | 95 | 3 | 33 | 17 | 148 |
 | Modules 21–40 | 192 | 8 | 1 | 31 | 232 |
-| **Total** | **344** | **11** | **53** | **59** | **467** |
+| **Total** | **346** | **11** | **51** | **59** | **467** |
 
-- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-053).
+- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-054).
 
 ## Packaging & Binary Release Gates (Post-Base / Distribution)
 
