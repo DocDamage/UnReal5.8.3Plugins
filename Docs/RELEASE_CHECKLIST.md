@@ -7,24 +7,24 @@ Current profile: base plugins only; no bridges, editor modules, or authored cont
 ## Base Suite Quality Gates
 
 - [x] **4-Target Host Build Matrix Pass**: Development Editor (Unity), Development Editor (Non-Unity), Runtime Game Development, and Runtime Game Shipping Win64 builds compiled with exit code 0.
-  - Editor Unity: `Scripts/Output/20260928-144638-DocModularDevEditor-Development-19ca96`
-  - Editor Non-Unity: `Scripts/Output/20260928-144641-DocModularDevEditor-Development-NoUnity-223d59`
-  - Game Development: `Scripts/Output/20260928-144851-DocModularDev-Development-c90343`
-  - Game Shipping: `Scripts/Output/20260928-144854-DocModularDev-Shipping-cae04b`
+  - Editor Unity: `Scripts/Output/20260928-151919-DocModularDevEditor-Development-21fff6`
+  - Editor Non-Unity: `Scripts/Output/20260928-151921-DocModularDevEditor-Development-NoUnity-e04223`
+  - Game Development: `Scripts/Output/20260928-152118-DocModularDev-Development-df8fe7`
+  - Game Shipping: `Scripts/Output/20260928-152120-DocModularDev-Shipping-7a325d`
 - [x] **No Editor Dependency Leakage**: Runtime modules compiled in Game Development and Game Shipping configurations (see the build evidence above).
-- [ ] **Zero Sibling Plugin Coupling**: Dependency metadata/source inspection shows only Core and engine dependencies, but Core-plus-one-feature builds with sibling plugins physically absent have not run. See `Docs/DEPENDENCY_MATRIX.md`.
-- [x] **Full Automated Test Suite**: All 391 `Doc.*` tests passed, with 0 failures: `Scripts/Output/20260928-144857-Automation-Doc-95b9e5`.
-- Source SHA-256 for these runs: `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448`.
-- [ ] **Complete Requirement Traceability**: 344 of 467 requirement IDs are Verified; 11 are Partial, 51 In Progress, and 61 Not Started.
+- [x] **Zero Sibling Plugin Coupling**: Core-only and Core-plus-one-feature non-unity builds passed for all 40 features with every sibling directory absent. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`. This gate covers compilation and public-header isolation; runtime startup and second-host portability remain open.
+- [x] **Full Automated Test Suite**: All 391 `Doc.*` tests passed, with 0 failures: `Scripts/Output/20260928-152122-Automation-Doc-036e83`.
+- Verification source SHA-256 recorded by every build, automation and isolation summary at run time: `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`. The post-run edits changed documentation/evidence records only; no code, configuration, plugin descriptor, or build script changed.
+- [ ] **Complete Requirement Traceability**: 344 of 467 requirement IDs are Verified; 11 are Partial, 53 In Progress, and 59 Not Started.
 
 | Scope | Verified | Partial | In Progress | Not Started | Total |
 |---|---:|---:|---:|---:|---:|
 | Modules 1–10 | 58 | 0 | 18 | 11 | 87 |
-| Modules 11–20 | 94 | 3 | 33 | 18 | 148 |
-| Modules 21–40 | 192 | 8 | 0 | 32 | 232 |
-| **Total** | **344** | **11** | **51** | **61** | **467** |
+| Modules 11–20 | 94 | 3 | 34 | 17 | 148 |
+| Modules 21–40 | 192 | 8 | 1 | 31 | 232 |
+| **Total** | **344** | **11** | **53** | **59** | **467** |
 
-- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-050).
+- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-051).
 
 ## Packaging & Binary Release Gates (Post-Base / Distribution)
 

@@ -1,0 +1,77 @@
+{
+    "check":  "PluginIsolation",
+    "result":  "Failed",
+    "sourceSha256":  "8F6FA6CE2AB7EB858B45D1C5FEE931712B61A60980F9CA5A25762280D9C9237F",
+    "verifierSha256":  "267CBFFAF2673B2D2FC92F5B9FC2219FBEA2DA339E2F34BC0CF3F3321A812293",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "fullSuite":  false,
+    "expectedPlugins":  1,
+    "completedPlugins":  1,
+    "passed":  0,
+    "failed":  1,
+    "start":  "2026-09-28T15:15:23.7189574-04:00",
+    "end":  "2026-09-28T15:15:45.1705974-04:00",
+    "runDirectory":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151523-PluginIsolation-d0e5e5",
+    "results":  [
+                    {
+                        "plugin":  "DocPuzzleMechanisms",
+                        "runtimeModule":  "DocPuzzleMechanismsRuntime",
+                        "result":  "Failed",
+                        "exitCode":  6,
+                        "reason":  null,
+                        "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Build\\BatchFiles\\Build.bat\" DocIsolationHostEditor Win64 Development -Project=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151523-PluginIsolation-d0e5e5\\DocPuzzleMechanisms\\DocIsolationHost.uproject\" -WaitMutex -DisableUnity",
+                        "sourceSha256":  "8F6FA6CE2AB7EB858B45D1C5FEE931712B61A60980F9CA5A25762280D9C9237F",
+                        "verifierSha256":  "267CBFFAF2673B2D2FC92F5B9FC2219FBEA2DA339E2F34BC0CF3F3321A812293",
+                        "engineVersion":  "5.8.3",
+                        "changelist":  58210709,
+                        "target":  "DocIsolationHostEditor",
+                        "configuration":  "Development",
+                        "unity":  false,
+                        "siblingDescriptorDependencies":  [
+
+                                                          ],
+                        "presentDocModularPlugins":  [
+                                                         "DocModularCore",
+                                                         "DocPuzzleMechanisms"
+                                                     ],
+                        "projectEnabledPlugins":  [
+                                                      "DocModularCore",
+                                                      "DocPuzzleMechanisms"
+                                                  ],
+                        "consumerHeaderCount":  26,
+                        "consumerHeaders":  [
+                                                "DocModularCore/DocControlClaimArbiter.h",
+                                                "DocModularCore/DocCoreBlueprintLibrary.h",
+                                                "DocModularCore/DocCoreLog.h",
+                                                "DocModularCore/DocCoreTags.h",
+                                                "DocModularCore/DocCoreTestUtils.h",
+                                                "DocModularCore/DocEffectKey.h",
+                                                "DocModularCore/DocGameplayContext.h",
+                                                "DocModularCore/DocModularCoreRuntime.h",
+                                                "DocModularCore/DocOwnerScope.h",
+                                                "DocModularCore/DocPersistentObjectId.h",
+                                                "DocModularCore/DocPlayerControlSubsystem.h",
+                                                "DocModularCore/DocReferencePlayerControlProvider.h",
+                                                "DocModularCore/DocRequestHandle.h",
+                                                "DocModularCore/DocSharedTypes.h",
+                                                "DocModularCore/DocSystemResult.h",
+                                                "DocModularCore/Interfaces/DocGameplayTagProvider.h",
+                                                "DocModularCore/Interfaces/DocPersistentIdentity.h",
+                                                "DocModularCore/Interfaces/DocPlayerControlProvider.h",
+                                                "DocModularCore/Interfaces/DocWorldStateProvider.h",
+                                                "DocPuzzleMechanisms/DocPuzzleComponent.h",
+                                                "DocPuzzleMechanisms/DocPuzzleDefinition.h",
+                                                "DocPuzzleMechanisms/DocPuzzleInputComponent.h",
+                                                "DocPuzzleMechanisms/DocPuzzleMechanismsLog.h",
+                                                "DocPuzzleMechanisms/DocPuzzleRule.h",
+                                                "DocPuzzleMechanisms/DocPuzzleSubsystem.h",
+                                                "DocPuzzleMechanisms/DocPuzzleTypes.h"
+                                            ],
+                        "start":  "2026-09-28T15:15:23.7339567-04:00",
+                        "end":  "2026-09-28T15:15:45.1620940-04:00",
+                        "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151523-PluginIsolation-d0e5e5\\DocPuzzleMechanisms\\build.log",
+                        "stagedHost":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151523-PluginIsolation-d0e5e5\\DocPuzzleMechanisms"
+                    }
+                ]
+}

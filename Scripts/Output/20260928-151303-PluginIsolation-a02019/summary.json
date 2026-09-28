@@ -1,0 +1,50 @@
+{
+    "check":  "PluginIsolation",
+    "result":  "Failed",
+    "sourceSha256":  "5EF3FC42E6B310CDE04A2041D426F5E6A54E74734D057994E5B9D8C918CBD12E",
+    "verifierSha256":  "14C4A0F4E3660349542003FC93B5D29687DE94A76BF23A847EE1A8EAACA63F84",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "fullSuite":  false,
+    "expectedPlugins":  1,
+    "completedPlugins":  1,
+    "passed":  0,
+    "failed":  1,
+    "start":  "2026-09-28T15:13:03.2390357-04:00",
+    "end":  "2026-09-28T15:13:03.3310126-04:00",
+    "runDirectory":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151303-PluginIsolation-a02019",
+    "results":  [
+                    {
+                        "plugin":  "DocPuzzleMechanisms",
+                        "runtimeModule":  "DocPuzzleMechanismsRuntime",
+                        "result":  "Failed",
+                        "exitCode":  null,
+                        "reason":  "The property \u0027Plugins\u0027 cannot be found on this object. Verify that the property exists.",
+                        "command":  null,
+                        "sourceSha256":  "5EF3FC42E6B310CDE04A2041D426F5E6A54E74734D057994E5B9D8C918CBD12E",
+                        "verifierSha256":  "14C4A0F4E3660349542003FC93B5D29687DE94A76BF23A847EE1A8EAACA63F84",
+                        "engineVersion":  "5.8.3",
+                        "changelist":  58210709,
+                        "target":  "DocIsolationHostEditor",
+                        "configuration":  "Development",
+                        "unity":  false,
+                        "siblingDescriptorDependencies":  [
+
+                                                          ],
+                        "presentDocModularPlugins":  [
+                                                         "DocModularCore"
+                                                     ],
+                        "projectEnabledPlugins":  [
+
+                                                  ],
+                        "consumerHeaderCount":  0,
+                        "consumerHeaders":  [
+
+                                            ],
+                        "start":  "2026-09-28T15:13:03.2585403-04:00",
+                        "end":  "2026-09-28T15:13:03.3055153-04:00",
+                        "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151303-PluginIsolation-a02019\\DocPuzzleMechanisms\\build.log",
+                        "stagedHost":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-151303-PluginIsolation-a02019\\DocPuzzleMechanisms"
+                    }
+                ]
+}

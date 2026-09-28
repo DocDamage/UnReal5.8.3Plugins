@@ -334,5 +334,11 @@ Short architecture decision records. Each notes deviations from, or choices with
 - **Reason:** Verification summaries and traceability records are updated after builds/tests complete. Hashing those records would change the reported source fingerprint without changing the project inputs under test.
 - **Consequence:** The recorded SHA-256 identifies the code/config/specification inputs to a run. Logs, generated output, and post-run status records do not alter it.
 
+## D-051: Physical-Absence Isolation Hosts
+
+- **Decision:** `Verify-PluginIsolation.ps1` generates a fresh temporary host for Core alone and for Core plus one selected feature. Each host contains only its allowed DocModular plugin directories; declared engine plugin dependencies remain engine-provided. The generated consumer module includes each public header in a separate translation unit and builds non-unity.
+- **Reason:** A full-suite editor build can conceal missing dependencies while sibling plugins are available. Physical staging tests the base dependency boundary and external header usability directly.
+- **Consequence:** A passing isolation build establishes compile/header independence for that source snapshot. It does not establish runtime startup, packaging, PIE behavior, or portability to a second consumer project.
+
 
 

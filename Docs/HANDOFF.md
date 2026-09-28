@@ -7,12 +7,13 @@ traceability docs (per-requirement state). This file lists remaining work only.
 
 - **Code:** DocModularCore plus 40 gameplay plugins, all runtime-only base code, in `Plugins/DocModular`.
   Each plugin depends only on DocModularCore and engine modules.
-- **Verified:** all four host builds (Editor unity, Editor non-unity, Game Development, Game Shipping)
-  and the full automation suite, 391/391, in `Scripts/Output/20260928-144857-Automation-Doc-95b9e5`
-  (source SHA-256 `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448`).
+- **Verified:** all four host builds and the full automation suite (391/391) in the 2026-09-28 run series;
+  source SHA-256 at run time `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`.
+- **Isolation:** Core-only plus all 40 Core-and-feature hosts passed non-unity physical-absence builds (41/41);
+  evidence is `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`. Runtime startup, PIE, cooked
+  behavior, and second-host portability remain unverified.
 - **Not yet run:** `Scripts/Package-Host.ps1` and `Scripts/Record-ManualGate.ps1`; manual editor fixtures and
-  cooked gates remain pending. `Verify-PluginIsolation.ps1`, `Validate-Workspace.ps1`, and clean sample hosts
-  have not been created.
+  cooked gates remain pending. `Validate-Workspace.ps1` and the two clean sample hosts have not been created.
 - **Version control:** `main` publishes to https://github.com/DocDamage/UnReal5.8.3Plugins. These handoff
   corrections are published together on `origin/main`.
 - **Requirement state (all three traceability docs):**
@@ -20,12 +21,12 @@ traceability docs (per-requirement state). This file lists remaining work only.
 | Doc | Verified | Partial (manual gate) | In Progress | Not Started | Untraced |
 |---|---|---|---|---|---|
 | `REQUIREMENTS_TRACEABILITY.md` (Modules 1–10, 87 IDs) | 58 | 0 | 18 | 11 | 0 |
-| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 94 | 3 | 33 | 18 | 0 |
-| `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 192 | 8 | 0 | 32 | 0 |
+| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 94 | 3 | 34 | 17 | 0 |
+| `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 192 | 8 | 1 | 31 | 0 |
 
-The automated base logic is essentially done. What is left is the work automation cannot reach:
-editor-authored fixtures, cooked/packaged runs, real networking, bridges between plugins,
-isolation/portability proof, performance measurement, and release paperwork.
+The automated base logic and compile-time physical-absence checks are complete. What remains includes
+editor-authored fixtures, cooked/packaged runs, runtime startup and second-host portability proof, real
+networking, bridges between plugins, performance measurement, and release paperwork.
 
 ## 2. First handoff cleanup (completed 2026-09-28)
 
@@ -37,6 +38,7 @@ isolation/portability proof, performance measurement, and release paperwork.
    unchecked sibling-isolation gate.
 4. **Traceability:** added CROSS21-01..20 and REL21-01..12 from handoff Sections 23.7 and 37 as Not Started.
 5. **Publication:** these follow-up corrections were committed and pushed to `origin/main` as one changeset.
+6. **Isolation:** `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus each feature with every sibling directory absent (41/41 passed); the dependency matrix and affected traceability rows now cite that run.
 
 ## 3. Remaining work by workstream
 
@@ -64,11 +66,9 @@ Base code exists and passes headless tests; each needs a fixture or a run type a
 - Note: SAV-04 and SAV-10 say "code tested / roundtrip verified" but are still In Progress; decide what is missing or promote them with evidence.
 
 ### C. Isolation, portability and cooked content (L)
-- Write `Scripts/Verify-PluginIsolation.ps1`: build a host with Core plus one plugin, siblings physically absent,
-  for each of the 40 plugins. Covers INS-07, EXP-01, MAP-12, WEA-12, SFC-12, DIA-12 (base part), OBJ-12, SCH-12,
-  KNO-12, INV-12, UNL-12, UI-12 (base part), REL-02, REL21-02.
-- Build the two structurally different clean sample hosts (`Samples/` is empty) for portability (REL-02, REL21-02).
-- Write `Scripts/Validate-Workspace.ps1` (planned in the status doc, never created).
+- **Compile/header isolation complete:** `Verify-PluginIsolation.ps1` passed Core-only and all 40 Core-plus-feature builds with sibling directories physically absent; each public header compiled in a separate consumer translation unit. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`.
+- Runtime startup checks, PIE behavior, bridge on/off checks and two structurally different clean sample hosts remain for portability. These cover the remaining parts of INS-07, EXP-01, MAP-12, WEA-12, SFC-12, DIA-12 (bridge part), OBJ-12, SCH-12, KNO-12, INV-12, UNL-12, UI-12 (bridge part), REL-02 and REL21-02.
+- Write `Scripts/Validate-Workspace.ps1` (planned in the status doc, not created).
 - EXP-09: content and localization load from a real cooked Win64 build (after workstream A's packaging works).
 
 ### D. Networking profiles (L)
@@ -103,12 +103,10 @@ profile and lists deferred work; it must not be called complete because descript
 
 ## 4. Suggested order
 
-1. Section 2 items (verify, token, push, checklist, trace missing IDs).
-2. C: isolation script first. It is pure scripting, runs unattended, and closes the most rows.
-3. A: first packaged build, then the 11 manual gates.
-4. B: PIE/Blueprint fixtures, in the same editor session as A where possible.
-5. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
-6. D/E for the chosen profile, then G, then H.
+1. Complete A's first packaged build, then record the 11 manual cooked gates.
+2. Complete B's PIE, Blueprint and editor-run fixtures, including runtime startup checks for isolated hosts and two distinct consumer hosts.
+3. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
+4. Complete D/E for the chosen profile, then G, then H.
 
 A realistic first release is "Base profile, local-only, no bridges": it needs Section 2, C, A, B, G and the
 base parts of H. Networking and bridges can follow as separate profiles.

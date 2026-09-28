@@ -1,11 +1,11 @@
 # Development Status
 
 ## Workspace and verification identity
-- Updated: 2026-09-28; latest full matrix passed 391/391 on source SHA-256 `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448` (see "Current verification")
+- Updated: 2026-09-28; latest full matrix passed 391/391 and all 41 isolated hosts passed on run-time source SHA-256 `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351` (see "Current verification")
 - Branch / remote: local branch `main`, remote `origin` = https://github.com/DocDamage/UnReal5.8.3Plugins. Verification summaries identify the tested source inputs; only `summary.json` run records are intended for commits, while logs and reports stay local.
 - Worktree: `F:\Reusable Unreal Modules`. All files were created by the agent across sessions.
 - Engine: Unreal Engine 5.8.3, CL 58210709, branch `++UE5+Release-5.8`, promoted build, at `C:\Program Files\UE_5.8` (see `ENGINE_COMPATIBILITY.md`)
-- Current milestone: **All 40 gameplay modules implemented; 391/391 automated tests pass. 11 requirements remain Partial because their cooked/packaged/audible part is a manual gate (see "Known issues and risks")**. All plugins across Core, Modules 1–20, Phase 9 (Modules 21, 26, 22, 30, 34), Phase 10 (Modules 28, 27, 29, 25), Phase 11 (Modules 31, 32, 33, 35), Phase 12 (Modules 23, 24, 36), and Phase 13 (Modules 37: DocReplayGhosts, 38: DocRaceTiming, 39: DocModContent, 40: DocPlaytestRecorder) are fully verified across all 4 host build targets and all 391 automated tests (0 failures).
+- Current milestone: **All 40 gameplay modules implemented; 391/391 automated tests and 41/41 isolated compile/header builds pass. 11 requirements remain Partial because their cooked/packaged/audible part is a manual gate (see "Known issues and risks")**. All plugins across Core, Modules 1–20, Phase 9 (Modules 21, 26, 22, 30, 34), Phase 10 (Modules 28, 27, 29, 25), Phase 11 (Modules 31, 32, 33, 35), Phase 12 (Modules 23, 24, 36), and Phase 13 (Modules 37: DocReplayGhosts, 38: DocRaceTiming, 39: DocModContent, 40: DocPlaytestRecorder) are fully verified across all 4 host build targets and all 391 automated tests (0 failures).
 - Capability profile: Base only (no bridges, no editor modules, no content assets)
 
 ## Completed and verified
@@ -286,28 +286,32 @@ Total: 41 plugins, 391 authored automation tests (391 verified across all 41 plu
 - example Blueprint and content assets
 - the DocObjectPool utility, DocWorldActivationISM and DocInspectionMedia
 - the network transports
-- `Verify-PluginIsolation.ps1`, `Validate-Workspace.ps1` and the two clean sample hosts (`Package-Host.ps1` and `Record-ManualGate.ps1` were authored 2026-09-28 but have not run)
+- `Verify-PluginIsolation.ps1` passed for Core-only plus all 40 features. `Validate-Workspace.ps1` and the two clean sample hosts have not been created; `Package-Host.ps1` and `Record-ManualGate.ps1` were authored 2026-09-28 but have not run.
 
 Remaining work is organised in `Docs/HANDOFF.md`.
 
 ## Current verification
-Source SHA-256 for every row: `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448`
+Source SHA-256 recorded by each run at execution time: `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`
+
+After these runs, only documentation and evidence records were updated. `Docs/DEPENDENCY_MATRIX.md` is included in the general workspace fingerprint, so the current post-documentation source fingerprint is `1F3E2993D696F1BD5840D4142F6D771B3F1A74C2B080C9115FE40D288318A847`; no code, project configuration, plugin descriptor, or build script changed after verification.
 
 | Check | Result | Command/report |
 |---|---|---|
-| Editor build (all plugins) | Passed | `Scripts/Output/20260928-144638-DocModularDevEditor-Development-19ca96` |
-| Editor non-unity build | Passed | `Scripts/Output/20260928-144641-DocModularDevEditor-Development-NoUnity-223d59` |
-| Runtime Development build | Passed | `Scripts/Output/20260928-144851-DocModularDev-Development-c90343` |
-| Shipping build | Passed | `Scripts/Output/20260928-144854-DocModularDev-Shipping-cae04b` |
-| Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-144857-Automation-Doc-95b9e5` |
+| Editor build (all plugins) | Passed | `Scripts/Output/20260928-151919-DocModularDevEditor-Development-21fff6` |
+| Editor non-unity build | Passed | `Scripts/Output/20260928-151921-DocModularDevEditor-Development-NoUnity-e04223` |
+| Runtime Development build | Passed | `Scripts/Output/20260928-152118-DocModularDev-Development-df8fe7` |
+| Shipping build | Passed | `Scripts/Output/20260928-152120-DocModularDev-Shipping-7a325d` |
+| Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-152122-Automation-Doc-036e83` |
 | Shipping cook/package | Not Run | No wrapper yet |
-| Isolated dependency hosts (Core + one feature) | Not Run | No wrapper yet (`Verify-PluginIsolation.ps1` backlog) |
+| Isolated dependency hosts (Core-only + one feature per host) | Passed (41/41) | `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json` |
 | Cooked / packaged / audible / rendered manual gates | Not Run | 11 rows listed under "Known issues and risks" |
+
+The isolated result proves compile-time and public-header separation only. It does not prove runtime startup, cooked behavior, PIE behavior, or portability to a second consumer project.
 
 ### Run record, 2026-09-28 audit-and-fix pass
 Every run of the day is listed, including failures. Each "Verify-Suite" run is 4 builds followed by the full `Doc.*` automation.
 
-| Automation run | Result | Builds | What it covered |
+| Run | Result | Builds | What it covered |
 |---|---|---|---|
 | `20260928-001026-Automation-Doc-97a71a` | Passed 391/391 | NoUnity 000342, Dev 000933, Shipping 001003 passed | Baseline before the pass |
 | `20260928-093451-Automation-Doc-fc00e4` | Failed 389/391 (`Doc.Paint.RenderRevision`, `Doc.Photo.AsyncCancellation`) | 093033 / 093057 / 093403 / 093429 passed | Safety fixes; exposed two real bugs |
@@ -321,10 +325,17 @@ Every run of the day is listed, including failures. Each "Verify-Suite" run is 4
 | `20260928-125758-Automation-Doc-d52e2e` | **Passed 391/391** | 125356 / 125413 / 125722 / 125740 passed | DocInventoryItems fixes synced from the Sep 27 working copy (receipt-conflict overwrite, bounded failed results, same-container access probe, partial-revision delta trim, failed-use replay, restore of session containers and world-item ids) plus new assertions in INV-02/06/08/10 |
 | `20260928-143755-Automation-Doc-88a1ba` | **Passed 391/391** | 143533 / 143535 / 143748 / 143754 passed | Reverified the project inputs after the Android File Server config cleanup; includes the INV-11 delta-trim assertions |
 | `20260928-144857-Automation-Doc-95b9e5` | **Passed 391/391** | 144638 / 144641 / 144851 / 144854 passed | Final full matrix on the stable empty-token config and final evidence-fingerprint helper; source SHA matches every row |
+| `20260928-151303-PluginIsolation-a02019` | Failed during staging (exit 5) | No build | Initial smoke exposed Core descriptor parsing when the optional `Plugins` field is absent; parser corrected |
+| `20260928-151346-PluginIsolation-1b3446` | Failed during staging | No build | PowerShell empty-list parameter binding in the dependency collector; parameter corrected |
+| `20260928-151523-PluginIsolation-d0e5e5` | Failed build (exit 6) | Puzzle Mechanisms | Generated UBT paths exceeded 260 characters; subsequent hosts use a temporary short drive mapping |
+| `20260928-151729-PluginIsolation-fbeba5` | Passed 1/1 | Puzzle Mechanisms | Smoke after path correction; Core + target and all 26 public headers compiled |
+| `20260928-152122-Automation-Doc-036e83` | **Passed 391/391** | 151919 / 151921 / 152118 / 152120 passed | Re-run after adding the isolation verifier; source SHA `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351` |
+| `20260928-152202-PluginIsolation-1b0a78` | **Passed 41/41 hosts** | Core-only + each of 40 features, non-unity | Exact physical plugin sets; 0 sibling descriptor references; every public header compiled in a separate consumer TU |
 
 ## Known issues and risks
 - **Native execution resolved**: The PowerShell scripts run directly on the host machine.
 - **Full compilation passed**: All 41 plugins compiled successfully across unity, non-unity (`-DisableUnity`), Game Development, and Game Shipping configurations.
+- **Plugin isolation passed**: Core alone and Core plus each of the 40 features compiled with every sibling plugin directory absent. Each public header compiled in an external consumer translation unit. Runtime startup and second-host portability remain unverified.
 - **Engine APIs verified**: Core engine APIs compile cleanly against UE 5.8.3.
 - CORE-07 (editor menu registration) is Not Started by decision D-008.
 - **Manual gates (Partial, no recorded evidence):** ACO-09, OPT-09, PNT-10, PHO-10, BRC-10, TRM-10, RHY-10, GHO-10 (`MODULES_21_40_TRACEABILITY.md`) and DIA-10, KNO-08, UI-10 (`EXPANSION_TRACEABILITY.md`). Their automated tests pass and cover only the headless part; PHO-10 and BRC-10 assert `Unsupported` rather than fake a result. Each needs a cooked/packaged run with recorded evidence before it can be marked Verified.
@@ -338,11 +349,12 @@ None.
 ## Expansion (modules 11–40)
 Specification: `Docs/UE5_8_3_Modular_Gameplay_Systems_Modules_11_20_IDE_Handoff.md` and `Docs/UE5_8_3_Modular_Gameplay_Systems_Modules_21_40_IDE_Handoff_v1.md`.
 Traceability: `Docs/EXPANSION_TRACEABILITY.md` (Modules 11–20) and `Docs/MODULES_21_40_TRACEABILITY.md` (Modules 21–40).
-All 40 modular gameplay plugins and Core are implemented; 391/391 automated tests pass (run `20260928-125758`). 11 requirements are Partial pending manual cooked gates.
+All 40 modular gameplay plugins and Core are implemented; 391/391 automated tests and all 41 isolated compile/header builds pass. 11 requirements are Partial pending manual cooked gates.
 
 ## Exact next task
-**Objective:** Prove per-plugin isolation, then continue with packaging and editor-only release gates.
+**Objective:** Package a consumer host and complete editor-only release gates.
+Completed: `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus all 40 features with physical sibling absence; dependency and traceability records cite the passing 41/41 summary.
 Next tasks:
-1. Create `Scripts/Verify-PluginIsolation.ps1` to build Core plus exactly one feature plugin with all sibling plugin directories absent; record each result under `Scripts/Output/`.
-2. Run the isolation verifier for all 40 feature plugins and update `Docs/DEPENDENCY_MATRIX.md` and affected traceability rows from those results.
-3. Run `Scripts/Package-Host.ps1`, author the fixtures listed in `Docs/MANUAL_GATES.md` in Unreal Editor, and record the 11 cooked/manual gates with `Scripts/Record-ManualGate.ps1`.
+1. Run `Scripts/Package-Host.ps1` and record the 11 cooked/manual gates from `Docs/MANUAL_GATES.md` with `Scripts/Record-ManualGate.ps1`.
+2. Author two structurally different clean consumer hosts for portability; complete runtime startup checks for the isolated hosts.
+3. Continue with the PIE, Blueprint, network, bridge, profiling and release work tracked in `Docs/HANDOFF.md`.
