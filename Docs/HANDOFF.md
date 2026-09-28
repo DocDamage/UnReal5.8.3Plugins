@@ -8,38 +8,35 @@ traceability docs (per-requirement state). This file lists remaining work only.
 - **Code:** DocModularCore plus 40 gameplay plugins, all runtime-only base code, in `Plugins/DocModular`.
   Each plugin depends only on DocModularCore and engine modules.
 - **Verified:** all four host builds (Editor unity, Editor non-unity, Game Development, Game Shipping)
-  and the full automation suite, 391/391, in `Scripts/Output/20260928-125758-Automation-Doc-d52e2e`
-  (source SHA-256 `4B97CBB1…2D5C42`).
-- **Not yet run on the current tree:** INV-11 delta-trim assertions, `Scripts/Package-Host.ps1`,
-  `Scripts/Record-ManualGate.ps1`, `.gitignore` changes, and these docs. The next `Run-Verify.cmd` covers the first.
-- **Version control:** local git on `main`, remote `origin` = https://github.com/DocDamage/UnReal5.8.3Plugins.
-  One local commit ahead of GitHub; **not pushed**.
+  and the full automation suite, 391/391, in `Scripts/Output/20260928-144857-Automation-Doc-95b9e5`
+  (source SHA-256 `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448`).
+- **Not yet run:** `Scripts/Package-Host.ps1` and `Scripts/Record-ManualGate.ps1`; manual editor fixtures and
+  cooked gates remain pending. `Verify-PluginIsolation.ps1`, `Validate-Workspace.ps1`, and clean sample hosts
+  have not been created.
+- **Version control:** `main` publishes to https://github.com/DocDamage/UnReal5.8.3Plugins. These handoff
+  corrections are published together on `origin/main`.
 - **Requirement state (all three traceability docs):**
 
 | Doc | Verified | Partial (manual gate) | In Progress | Not Started | Untraced |
 |---|---|---|---|---|---|
 | `REQUIREMENTS_TRACEABILITY.md` (Modules 1–10, 87 IDs) | 58 | 0 | 18 | 11 | 0 |
 | `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 94 | 3 | 33 | 18 | 0 |
-| `MODULES_21_40_TRACEABILITY.md` (Modules 21–40) | 192 | 8 | 0 | 0 | **32** (CROSS21-01..20, REL21-01..12) |
+| `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 192 | 8 | 0 | 32 | 0 |
 
 The automated base logic is essentially done. What is left is the work automation cannot reach:
 editor-authored fixtures, cooked/packaged runs, real networking, bridges between plugins,
 isolation/portability proof, performance measurement, and release paperwork.
 
-## 2. Do first (small, unblocks everything else)
+## 2. First handoff cleanup (completed 2026-09-28)
 
-1. **Run `Run-Verify.cmd`** on the committed tree. Expect 391/391; the INV-11 test now also checks
-   that delta-log trimming never serves part of a revision. Fix anything that fails before continuing.
-2. **Remove the Android File Server token** from `Config/DefaultEngine.ini` (`SecurityToken=…`, editor-generated)
-   or regenerate it, before the GitHub repo is public.
-3. **Push** `main` (`git push origin main` on Windows). If git reports "dubious ownership", run
-   `git config --global --add safe.directory "F:/Reusable Unreal Modules"`. Commits are authored as
-   DocDamage <thectproducer@gmail.com>; change `git config user.email` first if GitHub should link a different address.
-4. **Correct `RELEASE_CHECKLIST.md`.** Its ticked "Base Suite Quality Gates" overstate the state: they cite
-   Sep 27 runs, claim "100% traceability" (there are 51 In Progress, 29 Not Started, 11 Partial and 32 untraced IDs),
-   and tick "Zero Sibling Plugin Coupling" although no isolation build has ever run.
-5. **Trace the missing IDs.** Add CROSS21-01..20 (handoff Section 23.7) and REL21-01..12 (Section 37) to
-   `MODULES_21_40_TRACEABILITY.md` as Not Started, so they stop being invisible.
+1. **Verification:** the full `Scripts/Verify-Suite.ps1` matrix (called by `Run-Verify.cmd`) passed all four
+   host builds and 391/391 tests. This includes the INV-11 delta-trim assertions.
+2. **Android File Server config:** `SecurityToken` is empty and `bAllowNetworkConnection=False` in
+   `Config/DefaultEngine.ini`; no generated token is stored in the current config.
+3. **Release checklist:** updated with the current build/test evidence, incomplete traceability counts, and
+   unchecked sibling-isolation gate.
+4. **Traceability:** added CROSS21-01..20 and REL21-01..12 from handoff Sections 23.7 and 37 as Not Started.
+5. **Publication:** these follow-up corrections were committed and pushed to `origin/main` as one changeset.
 
 ## 3. Remaining work by workstream
 

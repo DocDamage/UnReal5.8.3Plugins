@@ -328,5 +328,11 @@ Short architecture decision records. Each notes deviations from, or choices with
 - **Zero-Overhead Disabled Mode.** When capture is disabled (`bCaptureEnabled = false`), event submission evaluates an inlined boolean check and returns immediately without memory allocations, JSON serialization, or string formatting (`DBG-09`).
 - **Local User-Controlled Architecture.** Bundles are created strictly on local disk at user request without automatic network transmission, remote telemetry services, or coupling to sibling gameplay plugins (`DBG-10`).
 
+## D-050: Stable Source Fingerprints for Run Evidence
+
+- **Decision:** `Get-DocSourceHash` fingerprints implementation, project configuration, and specification inputs while excluding generated output and mutable run/status documents (`DECISIONS.md`, `DEVELOPMENT_STATUS.md`, `HANDOFF.md`, the traceability files, `RELEASE_CHECKLIST.md`, and `TEST_MATRIX.md`).
+- **Reason:** Verification summaries and traceability records are updated after builds/tests complete. Hashing those records would change the reported source fingerprint without changing the project inputs under test.
+- **Consequence:** The recorded SHA-256 identifies the code/config/specification inputs to a run. Logs, generated output, and post-run status records do not alter it.
+
 
 

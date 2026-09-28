@@ -1,8 +1,8 @@
 # Development Status
 
 ## Workspace and verification identity
-- Updated: 2026-09-28 (audit-and-fix pass; latest full suite 391/391 on source SHA-256 `4B97CBB1…2D5C42`, see "Current verification")
-- Branch / commit: git, branch `main`, remote `origin` = https://github.com/DocDamage/UnReal5.8.3Plugins (initialised 2026-09-28; see `git log`). Evidence is still tied to source content by the SHA-256 in each `Scripts/Output/*/summary.json`, which excludes `.git`. Only those `summary.json` files are committed; logs and reports stay local.
+- Updated: 2026-09-28; latest full matrix passed 391/391 on source SHA-256 `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448` (see "Current verification")
+- Branch / remote: local branch `main`, remote `origin` = https://github.com/DocDamage/UnReal5.8.3Plugins. Verification summaries identify the tested source inputs; only `summary.json` run records are intended for commits, while logs and reports stay local.
 - Worktree: `F:\Reusable Unreal Modules`. All files were created by the agent across sessions.
 - Engine: Unreal Engine 5.8.3, CL 58210709, branch `++UE5+Release-5.8`, promoted build, at `C:\Program Files\UE_5.8` (see `ENGINE_COMPATIBILITY.md`)
 - Current milestone: **All 40 gameplay modules implemented; 391/391 automated tests pass. 11 requirements remain Partial because their cooked/packaged/audible part is a manual gate (see "Known issues and risks")**. All plugins across Core, Modules 1–20, Phase 9 (Modules 21, 26, 22, 30, 34), Phase 10 (Modules 28, 27, 29, 25), Phase 11 (Modules 31, 32, 33, 35), Phase 12 (Modules 23, 24, 36), and Phase 13 (Modules 37: DocReplayGhosts, 38: DocRaceTiming, 39: DocModContent, 40: DocPlaytestRecorder) are fully verified across all 4 host build targets and all 391 automated tests (0 failures).
@@ -291,15 +291,15 @@ Total: 41 plugins, 391 authored automation tests (391 verified across all 41 plu
 Remaining work is organised in `Docs/HANDOFF.md`.
 
 ## Current verification
-Source SHA-256 for every row: `4B97CBB1348FA78BCE48F14A0ED289A0FC066C81C385994842EB8DAB442D5C42`
+Source SHA-256 for every row: `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448`
 
 | Check | Result | Command/report |
 |---|---|---|
-| Editor build (all plugins) | Passed | `Scripts/Output/20260928-125356-DocModularDevEditor-Development-2b7ec4` |
-| Editor non-unity build | Passed | `Scripts/Output/20260928-125413-DocModularDevEditor-Development-NoUnity-3898d4` |
-| Runtime Development build | Passed | `Scripts/Output/20260928-125722-DocModularDev-Development-5a23c8` |
-| Shipping build | Passed | `Scripts/Output/20260928-125740-DocModularDev-Shipping-1bab1a` |
-| Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-125758-Automation-Doc-d52e2e` |
+| Editor build (all plugins) | Passed | `Scripts/Output/20260928-144638-DocModularDevEditor-Development-19ca96` |
+| Editor non-unity build | Passed | `Scripts/Output/20260928-144641-DocModularDevEditor-Development-NoUnity-223d59` |
+| Runtime Development build | Passed | `Scripts/Output/20260928-144851-DocModularDev-Development-c90343` |
+| Shipping build | Passed | `Scripts/Output/20260928-144854-DocModularDev-Shipping-cae04b` |
+| Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-144857-Automation-Doc-95b9e5` |
 | Shipping cook/package | Not Run | No wrapper yet |
 | Isolated dependency hosts (Core + one feature) | Not Run | No wrapper yet (`Verify-PluginIsolation.ps1` backlog) |
 | Cooked / packaged / audible / rendered manual gates | Not Run | 11 rows listed under "Known issues and risks" |
@@ -319,6 +319,8 @@ Every run of the day is listed, including failures. Each "Verify-Suite" run is 4
 | `20260928-123106-Automation-Doc-24eb06` | Failed 390/391 (`Doc.Ghost.SampleTimeline`) | 122537 / 122546 / 123034 / 123050 passed | Real bug: float cadence rejected on-cadence samples |
 | `20260928-124112-Automation-Doc-628bfc` | **Passed 391/391** | 123648 / 123655 / 124044 / 124057 passed | ReplayGhosts rewrite; stronger WorldTerminals, ModContent, Playtest tests |
 | `20260928-125758-Automation-Doc-d52e2e` | **Passed 391/391** | 125356 / 125413 / 125722 / 125740 passed | DocInventoryItems fixes synced from the Sep 27 working copy (receipt-conflict overwrite, bounded failed results, same-container access probe, partial-revision delta trim, failed-use replay, restore of session containers and world-item ids) plus new assertions in INV-02/06/08/10 |
+| `20260928-143755-Automation-Doc-88a1ba` | **Passed 391/391** | 143533 / 143535 / 143748 / 143754 passed | Reverified the project inputs after the Android File Server config cleanup; includes the INV-11 delta-trim assertions |
+| `20260928-144857-Automation-Doc-95b9e5` | **Passed 391/391** | 144638 / 144641 / 144851 / 144854 passed | Final full matrix on the stable empty-token config and final evidence-fingerprint helper; source SHA matches every row |
 
 ## Known issues and risks
 - **Native execution resolved**: The PowerShell scripts run directly on the host machine.
@@ -326,9 +328,9 @@ Every run of the day is listed, including failures. Each "Verify-Suite" run is 4
 - **Engine APIs verified**: Core engine APIs compile cleanly against UE 5.8.3.
 - CORE-07 (editor menu registration) is Not Started by decision D-008.
 - **Manual gates (Partial, no recorded evidence):** ACO-09, OPT-09, PNT-10, PHO-10, BRC-10, TRM-10, RHY-10, GHO-10 (`MODULES_21_40_TRACEABILITY.md`) and DIA-10, KNO-08, UI-10 (`EXPANSION_TRACEABILITY.md`). Their automated tests pass and cover only the headless part; PHO-10 and BRC-10 assert `Unsupported` rather than fake a result. Each needs a cooked/packaged run with recorded evidence before it can be marked Verified.
-- DocInventoryItems: the delta-log trim fix (never keep part of a revision) has no dedicated test yet.
+- INV-11 delta-log trimming assertions passed in the latest full suite run; they verify trimming never serves part of a revision.
 - Traceability for 40 rows (PNT, TRM, MEC, RAC) previously named tests that do not exist; corrected on 2026-09-28 to the handoff names the code already uses.
-- `Config/DefaultEngine.ini` contains an editor-generated Android File Server `SecurityToken`. Remove or regenerate it before the repository is made public.
+- Android File Server network connections are disabled and `SecurityToken` is empty in `Config/DefaultEngine.ini`.
 
 ## Artifacts
 None.
@@ -339,8 +341,8 @@ Traceability: `Docs/EXPANSION_TRACEABILITY.md` (Modules 11–20) and `Docs/MODUL
 All 40 modular gameplay plugins and Core are implemented; 391/391 automated tests pass (run `20260928-125758`). 11 requirements are Partial pending manual cooked gates.
 
 ## Exact next task
-**Objective:** Close the 11 manual gates with recorded evidence, then prepare release.
+**Objective:** Prove per-plugin isolation, then continue with packaging and editor-only release gates.
 Next tasks:
-1. Author the fixtures listed in `Docs/MANUAL_GATES.md`, package with `Scripts/Package-Host.ps1` and record each gate with `Scripts/Record-ManualGate.ps1`: ACO-09, OPT-09, PNT-10, PHO-10, BRC-10, TRM-10, RHY-10, GHO-10, DIA-10, KNO-08, UI-10.
-2. Run `Run-Verify.cmd` on the committed tree (it adds INV-11 delta-trim assertions and new scripts not covered by run `20260928-125758`), then push `main`.
-3. Review and update `Docs/RELEASE_CHECKLIST.md`.
+1. Create `Scripts/Verify-PluginIsolation.ps1` to build Core plus exactly one feature plugin with all sibling plugin directories absent; record each result under `Scripts/Output/`.
+2. Run the isolation verifier for all 40 feature plugins and update `Docs/DEPENDENCY_MATRIX.md` and affected traceability rows from those results.
+3. Run `Scripts/Package-Host.ps1`, author the fixtures listed in `Docs/MANUAL_GATES.md` in Unreal Editor, and record the 11 cooked/manual gates with `Scripts/Record-ManualGate.ps1`.

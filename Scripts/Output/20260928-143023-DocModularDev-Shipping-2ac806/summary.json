@@ -1,0 +1,15 @@
+﻿{
+    "check":  "Build",
+    "result":  "Passed",
+    "exitCode":  0,
+    "command":  "\"C:\\Program Files\\UE_5.8\\Engine\\Build\\BatchFiles\\Build.bat\" DocModularDev Win64 Shipping -Project=\"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -WaitMutex",
+    "engineVersion":  "5.8.3",
+    "changelist":  58210709,
+    "target":  "DocModularDev",
+    "configuration":  "Shipping",
+    "unity":  true,
+    "sourceSha256":  "58C593B0F5D0165AAF5C78EF63EEA340B2D4510E47A98592B2B5B80881CB0886",
+    "start":  "2026-09-28T14:30:24.1547108-04:00",
+    "end":  "2026-09-28T14:30:26.4625140-04:00",
+    "log":  "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-143023-DocModularDev-Shipping-2ac806\\build.log"
+}

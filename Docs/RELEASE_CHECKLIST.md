@@ -2,28 +2,34 @@
 
 Target engine: Unreal Engine 5.8.3 (CL 58210709, branch `++UE5+Release-5.8`) on Windows x64.
 Suite scope: 41 runtime plugins (`DocModularCore` + Modules 1 through 40).
+Current profile: base plugins only; no bridges, editor modules, or authored content assets.
 
 ## Base Suite Quality Gates
-- [x] **4-Target Host Build Matrix Pass**: Development Editor (Unity), Development Editor (Non-Unity), Runtime Game Development, and Runtime Game Shipping Win64 builds compile with exit code 0.
-  - Editor Unity: `Scripts/Output/20260927-173019-DocModularDevEditor-Development-71d113`
-  - Editor Non-Unity: `Scripts/Output/20260927-173020-DocModularDevEditor-Development-NoUnity-5ddd9f`
-  - Game Development: `Scripts/Output/20260927-173327-DocModularDev-Development-7574fb`
-  - Game Shipping: `Scripts/Output/20260927-173341-DocModularDev-Shipping-14ea8a`
-- [x] **No Editor Dependency Leakage**: Runtime modules reference no Editor modules or editor-only types (`WITH_EDITOR` guards or runtime-safe isolation verified by Game Development & Shipping builds).
-- [x] **Zero Sibling Plugin Coupling**: Every feature plugin depends strictly on `DocModularCoreRuntime` and essential engine modules only; zero cross-feature sibling dependencies.
-- [x] **100% Traceability and Passing Automated Tests**:
-  - Modules 1–10: 84 tests verified in `Docs/REQUIREMENTS_TRACEABILITY.md`.
-  - Modules 11–20: 107 tests verified in `Docs/EXPANSION_TRACEABILITY.md`.
-  - Modules 21–40: 200 tests verified in `Docs/MODULES_21_40_TRACEABILITY.md`.
-  - Full Suite Test Automation (all 391 tests passing, 0 failed): `Scripts/Output/20260927-173356-Automation-Doc-aec737`.
-- [x] **Documentation & Architecture Standards**:
-  - Every plugin contains a dedicated [README.md](file:///f:/Reusable%20Unreal%20Modules/Plugins/DocModular/) specifying module purpose, public types, settings, and invariants.
-  - Architectural decisions recorded in [Docs/DECISIONS.md](file:///f:/Reusable%20Unreal%20Modules/Docs/DECISIONS.md) (D-001 through D-049).
+
+- [x] **4-Target Host Build Matrix Pass**: Development Editor (Unity), Development Editor (Non-Unity), Runtime Game Development, and Runtime Game Shipping Win64 builds compiled with exit code 0.
+  - Editor Unity: `Scripts/Output/20260928-144638-DocModularDevEditor-Development-19ca96`
+  - Editor Non-Unity: `Scripts/Output/20260928-144641-DocModularDevEditor-Development-NoUnity-223d59`
+  - Game Development: `Scripts/Output/20260928-144851-DocModularDev-Development-c90343`
+  - Game Shipping: `Scripts/Output/20260928-144854-DocModularDev-Shipping-cae04b`
+- [x] **No Editor Dependency Leakage**: Runtime modules compiled in Game Development and Game Shipping configurations (see the build evidence above).
+- [ ] **Zero Sibling Plugin Coupling**: Dependency metadata/source inspection shows only Core and engine dependencies, but Core-plus-one-feature builds with sibling plugins physically absent have not run. See `Docs/DEPENDENCY_MATRIX.md`.
+- [x] **Full Automated Test Suite**: All 391 `Doc.*` tests passed, with 0 failures: `Scripts/Output/20260928-144857-Automation-Doc-95b9e5`.
+- Source SHA-256 for these runs: `79C613832807F1FF77E90C9D2F715FDB56D0326BCA80521C68CD04294166A448`.
+- [ ] **Complete Requirement Traceability**: 344 of 467 requirement IDs are Verified; 11 are Partial, 51 In Progress, and 61 Not Started.
+
+| Scope | Verified | Partial | In Progress | Not Started | Total |
+|---|---:|---:|---:|---:|---:|
+| Modules 1–10 | 58 | 0 | 18 | 11 | 87 |
+| Modules 11–20 | 94 | 3 | 33 | 18 | 148 |
+| Modules 21–40 | 192 | 8 | 0 | 32 | 232 |
+| **Total** | **344** | **11** | **51** | **61** | **467** |
+
+- [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-050).
 
 ## Packaging & Binary Release Gates (Post-Base / Distribution)
-- [ ] Cooked package resolves every soft reference, tag, config, and localization entry across standalone packaged game.
-- [ ] Clean extraction install (no developer paths, no cached binaries, no host content).
-- [ ] Repeated launch, map travel, shutdown scenario in the packaged build.
-- [ ] File manifest + archive checksum produced and extraction verified.
-- [ ] Two clean consumer hosts prove portability without sibling plugin existence.
 
+- [ ] Cooked package resolves every soft reference, tag, config, and localization entry across a standalone packaged game.
+- [ ] Clean extraction install (no developer paths, cached binaries, or host content).
+- [ ] Repeated launch, map travel, and shutdown scenario in the packaged build.
+- [ ] File manifest and archive checksum produced; extraction verified.
+- [ ] Two clean consumer hosts prove portability without sibling plugin existence.

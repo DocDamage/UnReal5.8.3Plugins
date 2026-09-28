@@ -23,13 +23,15 @@ function New-DocRunDirectory {
     return $dir
 }
 
-# Hash of every tracked-source-like file so a result is tied to exact source content
-# even without version control. Excludes generated/output folders.
+# Hash source, config, and specification files so a result is tied to exact inputs
+# even without version control. Run/status/decision markdown is excluded because it
+# is updated after a run and must not change the identity of the code under test.
 function Get-DocSourceHash {
     param([Parameter(Mandatory)] [string]$RepoRoot)
     $exclude = '\\(Binaries|Intermediate|Saved|DerivedDataCache|\.vs|\.git|Scripts\\Output)\\'
+    $evidenceDocs = '\\Docs\\(DECISIONS|DEVELOPMENT_STATUS|HANDOFF|REQUIREMENTS_TRACEABILITY|EXPANSION_TRACEABILITY|MODULES_21_40_TRACEABILITY|RELEASE_CHECKLIST|TEST_MATRIX)\.md$'
     $files = Get-ChildItem -LiteralPath $RepoRoot -Recurse -File |
-        Where-Object { $_.FullName -notmatch $exclude } |
+        Where-Object { $_.FullName -notmatch $exclude -and $_.FullName -notmatch $evidenceDocs } |
         Sort-Object FullName
     $sha = [System.Security.Cryptography.SHA256]::Create()
     try {
