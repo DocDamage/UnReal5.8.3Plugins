@@ -5,7 +5,7 @@ Short architecture decision records. Each notes deviations from, or choices with
 ## D-001 — Repository root is the development host project
 **Date:** 2026-09-26
 **Decision:** `DocModularDev.uproject` lives at the repository root so `Plugins/DocModular/*` is discovered without copying. It has one empty primary game module (`DocModularDev`) so UBT has real targets to build, and that module doubles as the CORE-06 external consumer.
-**Consequence:** The two clean *portability* hosts required by Section 1 are separate projects under `Samples/` and are still to be created. The root host does not count as one.
+**Consequence:** The root host does not count as a separate portability host. D-055 records the two samples under `Samples/` that satisfy that gate.
 
 ## D-002 — Adopt `Doc`-prefixed public type names
 **Date:** 2026-09-26
@@ -357,6 +357,12 @@ Short architecture decision records. Each notes deviations from, or choices with
 - **Decision:** `Verify-IsolatedStartup.ps1` launches each already-built physical-absence host in headless game mode and requires the expected Runtime modules to load, an engine world to reach play, clean shutdown, and exit code zero. Before launch, it verifies that staged plugin files match the current repository sources.
 - **Reason:** Compilation and public-header isolation do not prove that plugin modules load in a game world. A bounded startup check closes that evidence gap without claiming feature behavior.
 - **Consequence:** A pass proves basic startup and teardown with the documented plugin set only. PIE behavior, feature functionality, cooked assets, bridge-present behavior, performance, and consumer-host portability require separate evidence.
+
+## D-055: Two-Shape Consumer Portability Evidence
+
+- **Decision:** Keep two small consumer samples under `Samples/`. `CppConsumer` discovers the full suite through a grouped `AdditionalPluginDirectories` root and compiles all Runtime module dependencies and public headers. `NonCharacterInteraction` is a nested project template; `Verify-ConsumerHosts.ps1` stages exact source copies of only Core and Interaction into its ordinary project-local `Plugins` tree, checks their fingerprints, builds it, and launches its actor-based interaction smoke flow.
+- **Reason:** One full-suite consumer and one focused local-install consumer exercise different project and plugin-discovery layouts while keeping binary asset authoring out of the portability gate.
+- **Consequence:** A pass proves broad C++ build portability plus focused Core/Interaction startup and behavior. The broad host is build-only in this gate; this evidence does not replace per-plugin isolation, Blueprint/PIE, cooked content, or broad runtime co-loading evidence.
 
 
 

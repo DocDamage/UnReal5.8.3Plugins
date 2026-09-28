@@ -11,25 +11,28 @@ traceability docs (per-requirement state). This file lists remaining work only.
   latest full-suite and Development package source SHA-256 `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`.
 - **Isolation:** Core-only plus all 40 Core-and-feature hosts passed non-unity physical-absence builds (41/41)
   and headless game-mode startup (41/41). Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`
-  and `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`. Feature behavior, PIE, cooked behavior,
-  and second-host portability remain unverified.
+  and `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`.
+- **Consumer portability:** two structurally different clean hosts passed. The broad C++ host built all 41 Runtime
+  modules and public headers; the nested project-local host contained only Core + Interaction and completed an
+  instant interaction between two ordinary `AActor` subclasses. Evidence: `Scripts/Output/20260928-190206-CH-9d1ed1/summary.json`.
+  Full-suite behavior, PIE, and cooked behavior remain unverified; the broad host's runtime startup is not claimed.
 - **Packaging:** `Scripts/Package-Host.ps1` completed one Win64 Development package run, archived the executable
   and pak, and has no manual gate fixtures. `Scripts/Record-ManualGate.ps1` has not run; manual editor fixtures
   and cooked gates remain pending. `Scripts/Validate-Workspace.ps1` passed its 8-check read-only preflight;
-  the two clean sample hosts have not been created.
-- **Version control:** `main` publishes to https://github.com/DocDamage/UnReal5.8.3Plugins. These handoff
-  corrections are published together on `origin/main`.
+  `Scripts/Verify-ConsumerHosts.ps1` passed both clean sample hosts.
+- **Version control:** `main` publishes to https://github.com/DocDamage/UnReal5.8.3Plugins.
 - **Requirement state (all three traceability docs):**
 
 | Doc | Verified | Partial (manual gate) | In Progress | Not Started | Untraced |
 |---|---|---|---|---|---|
 | `REQUIREMENTS_TRACEABILITY.md` (Modules 1–10, 87 IDs) | 59 | 0 | 17 | 11 | 0 |
-| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 95 | 3 | 33 | 17 | 0 |
-| `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 192 | 8 | 1 | 31 | 0 |
+| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 96 | 3 | 32 | 17 | 0 |
+| `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 193 | 8 | 0 | 31 | 0 |
 
-The automated base logic and compile-time physical-absence checks are complete. What remains includes
-editor-authored fixtures, cooked/packaged runs, runtime startup and second-host portability proof, real
-networking, bridges between plugins, performance measurement, and release paperwork.
+The automated base logic, compile-time physical-absence checks, individual plugin startup checks, and two-host
+portability proof are complete for the tested scope. What remains includes editor-authored fixtures,
+cooked/packaged runs, PIE validation, real networking, bridges between plugins, performance measurement,
+and release paperwork.
 
 ## 2. First handoff cleanup (completed 2026-09-28)
 
@@ -69,9 +72,11 @@ Base code exists and passes headless tests; each needs a fixture or a run type a
 
 ### C. Isolation, portability and cooked content (L)
 - **Compile/header isolation complete:** `Verify-PluginIsolation.ps1` passed Core-only and all 40 Core-plus-feature builds with sibling directories physically absent; each public header compiled in a separate consumer translation unit. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`.
-- **Headless runtime startup complete:** `Verify-IsolatedStartup.ps1` launched Core-only and all 40 Core-plus-feature hosts (41/41); expected runtime modules loaded, a world reached play, and each process shut down cleanly. Evidence: `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`. Feature behavior, PIE, bridge-on tests and two structurally different clean sample hosts remain. The startup evidence closes INS-07 and EXP-01; performance rows and REL-02/REL21-02 stay open for their other acceptance criteria.
-- `Scripts/Validate-Workspace.ps1` passed its static preflight (`Scripts/Output/20260928-174042-WorkspaceValidation-5ba0d3/summary.json`); second-host portability remains unverified.
+- **Headless runtime startup complete:** `Verify-IsolatedStartup.ps1` launched Core-only and all 40 Core-plus-feature hosts (41/41); expected runtime modules loaded, a world reached play, and each process shut down cleanly. Evidence: `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`. Feature behavior, PIE, bridge-on tests, and performance rows remain. The startup evidence closes INS-07 and EXP-01; the separate two-host sample gate above closes REL-02 and REL21-02 for portability.
+- **Two clean consumer hosts passed:** `CppConsumer` built all 41 runtime modules using an external grouped plugin root; the nested `NonCharacterInteraction` project staged only Core + Interaction into a standard project-local plugin tree and completed a headless interaction between plain actors. Both plugin snapshots matched source. Evidence: `Scripts/Output/20260928-190206-CH-9d1ed1/summary.json`. This closes the second-host portability criteria REL-02 and REL21-02.
+- `Scripts/Validate-Workspace.ps1` passed its static preflight (`Scripts/Output/20260928-181720-WorkspaceValidation-282fbf/summary.json`).
 - EXP-09: authored content and localization load from a real cooked Win64 build; the bare-host package run proves the pipeline only.
+- The broad C++ host is build-only in the final sample-host gate. An exploratory headless launch failed while loading Dialogue automation types with a duplicate `DocDialogueParticipant` default-object fatal; this is recorded by the superseded `20260928-181813-ConsumerHosts-6a8ab5` summary. The final gate claims its broad build and the focused local-host runtime flow, not broad all-plugin startup through the external root.
 
 ### D. Networking profiles (L)
 No transport exists. Requirements that need real server/client, late join or dedicated-server evidence:
@@ -105,11 +110,10 @@ profile and lists deferred work; it must not be called complete because descript
 
 ## 4. Suggested order
 
-1. Build two structurally different clean consumer hosts for portability, including a non-Character interaction participant.
-2. Author the 11 editor fixtures, package and observe them, then record the manual cooked gates.
-3. Complete B's PIE, Blueprint and editor-run fixtures.
-4. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
-5. Complete D/E for the chosen profile, then G, then H.
+1. Author the 11 editor fixtures, package and observe them, then record the manual cooked gates.
+2. Complete B's PIE, Blueprint and editor-run fixtures.
+3. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
+4. Complete D/E for the chosen profile, then G, then H.
 
 A realistic first release is "Base profile, local-only, no bridges": it needs Section 2, C, A, B, G and the
 base parts of H. Networking and bridges can follow as separate profiles.

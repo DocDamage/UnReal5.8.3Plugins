@@ -1,0 +1,20 @@
+{
+  "check": "ConsumerHosts",
+  "result": "Aborted",
+  "sourceSha256": "508D9C810B1D7A85D724F8C7A1EB99479E3731E4C832CB1E3AFCE950D0A05367",
+  "verifierSha256": "7F397248767B336500EE835DF275BA78720D849776B2B6576A8A6368DBA9C7AF",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "buildTimeoutMinutes": 90,
+  "launchTimeoutMinutes": 5,
+  "expectedHosts": 2,
+  "completedHosts": 0,
+  "passed": 0,
+  "failed": 0,
+  "start": "2026-09-28T18:35:37.4902162-04:00",
+  "end": null,
+  "runDirectory": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-183536-ConsumerHosts-cca204",
+  "results": [],
+  "abortReason": "Strict-mode error on an optional project field stopped the verifier after the CppConsumer build, before per-host results and the final end time were serialized."
+}

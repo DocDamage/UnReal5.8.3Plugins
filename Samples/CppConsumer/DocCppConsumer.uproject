@@ -1,0 +1,186 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "",
+  "Description": "Broad C++ consumer host for the DocModular plugin suite.",
+  "AdditionalPluginDirectories": [
+    "../../Plugins/DocModular"
+  ],
+  "Modules": [
+    {
+      "Name": "DocCppConsumer",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "DocAcousticSpaces",
+      "Enabled": true
+    },
+    {
+      "Name": "DocAdaptiveAudio",
+      "Enabled": true
+    },
+    {
+      "Name": "DocAssemblyMaintenance",
+      "Enabled": true
+    },
+    {
+      "Name": "DocBroadcastChannels",
+      "Enabled": true
+    },
+    {
+      "Name": "DocDialogue",
+      "Enabled": true
+    },
+    {
+      "Name": "DocEvents",
+      "Enabled": true
+    },
+    {
+      "Name": "DocEvidenceDeduction",
+      "Enabled": true
+    },
+    {
+      "Name": "DocFluidNetworks",
+      "Enabled": true
+    },
+    {
+      "Name": "DocGameFrameworkUI",
+      "Enabled": true
+    },
+    {
+      "Name": "DocGestureRecognition",
+      "Enabled": true
+    },
+    {
+      "Name": "DocInspection",
+      "Enabled": true
+    },
+    {
+      "Name": "DocInteraction",
+      "Enabled": true
+    },
+    {
+      "Name": "DocInventoryItems",
+      "Enabled": true
+    },
+    {
+      "Name": "DocKnowledgeCodex",
+      "Enabled": true
+    },
+    {
+      "Name": "DocMapNavigation",
+      "Enabled": true
+    },
+    {
+      "Name": "DocMaterialReactions",
+      "Enabled": true
+    },
+    {
+      "Name": "DocMechanicalNetworks",
+      "Enabled": true
+    },
+    {
+      "Name": "DocModContent",
+      "Enabled": true
+    },
+    {
+      "Name": "DocModularCore",
+      "Enabled": true
+    },
+    {
+      "Name": "DocNPCSchedules",
+      "Enabled": true
+    },
+    {
+      "Name": "DocOpticalBeams",
+      "Enabled": true
+    },
+    {
+      "Name": "DocPhotography",
+      "Enabled": true
+    },
+    {
+      "Name": "DocPlaytestRecorder",
+      "Enabled": true
+    },
+    {
+      "Name": "DocPowerNetworks",
+      "Enabled": true
+    },
+    {
+      "Name": "DocPuzzleMechanisms",
+      "Enabled": true
+    },
+    {
+      "Name": "DocQuestObjectives",
+      "Enabled": true
+    },
+    {
+      "Name": "DocRaceTiming",
+      "Enabled": true
+    },
+    {
+      "Name": "DocRegions",
+      "Enabled": true
+    },
+    {
+      "Name": "DocReplayGhosts",
+      "Enabled": true
+    },
+    {
+      "Name": "DocRhythmChallenges",
+      "Enabled": true
+    },
+    {
+      "Name": "DocSave",
+      "Enabled": true
+    },
+    {
+      "Name": "DocSequences",
+      "Enabled": true
+    },
+    {
+      "Name": "DocServiceQueues",
+      "Enabled": true
+    },
+    {
+      "Name": "DocStreaming",
+      "Enabled": true
+    },
+    {
+      "Name": "DocSurfaceFeedback",
+      "Enabled": true
+    },
+    {
+      "Name": "DocSurfacePainting",
+      "Enabled": true
+    },
+    {
+      "Name": "DocTime",
+      "Enabled": true
+    },
+    {
+      "Name": "DocUnlocksProgression",
+      "Enabled": true
+    },
+    {
+      "Name": "DocWeather",
+      "Enabled": true
+    },
+    {
+      "Name": "DocWorldActivation",
+      "Enabled": true
+    },
+    {
+      "Name": "DocWorldTerminals",
+      "Enabled": true
+    },
+    {
+      "Name": "EnhancedInput",
+      "Enabled": true
+    }
+  ]
+}

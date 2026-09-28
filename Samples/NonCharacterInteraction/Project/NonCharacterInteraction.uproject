@@ -1,0 +1,27 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "",
+  "Description": "Minimal external consumer demonstrating actor-based DocInteraction usage.",
+  "Modules": [
+    {
+      "Name": "NonCharacterInteraction",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "DocModularCore",
+      "Enabled": true
+    },
+    {
+      "Name": "DocInteraction",
+      "Enabled": true
+    },
+    {
+      "Name": "EnhancedInput",
+      "Enabled": true
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "check": "WorkspaceValidation",
+  "result": "Passed",
+  "exitCode": 0,
+  "command": ".\\Scripts\\Validate-Workspace.ps1 -EngineRoot 'C:\\Program Files\\UE_5.8'",
+  "sourceSha256": "27A0486C43C7BE5EB8A9161656453800FF9E51CFCCF251FA7A18AA06A06D80A4",
+  "verifierSha256": "638250260128C71F9C200264AF02C22601B4DE3DA6A63C303AF2B53704E0674F",
+  "project": "F:\\Reusable Unreal Modules\\DocModularDev.uproject",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "engineBranch": "++UE5+Release-5.8",
+  "start": "2026-09-28T18:17:21.1997093-04:00",
+  "end": "2026-09-28T18:17:21.4463815-04:00",
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "EngineIdentity",
+      "result": "Passed",
+      "details": "Found Unreal Engine 5.8.3, CL 58210709, branch ++UE5+Release-5.8; expected 5.8.3 CL 58210709."
+    },
+    {
+      "name": "EngineTools",
+      "result": "Passed",
+      "details": "Build.bat, UnrealEditor-Cmd.exe and RunUAT.bat are present."
+    },
+    {
+      "name": "HostProject",
+      "result": "Passed",
+      "details": "Parsed F:\\Reusable Unreal Modules\\DocModularDev.uproject; EngineAssociation=5.8, modules=1. Expected association 5.8 and at least one module."
+    },
+    {
+      "name": "PluginDescriptors",
+      "result": "Passed",
+      "details": "Found 41 plugins, each with one descriptor and one Runtime module; grouping directory is descriptor-free."
+    },
+    {
+      "name": "BaseDependencyBoundary",
+      "result": "Passed",
+      "details": "No feature descriptor or Build.cs declares another DocModular feature; Core is present."
+    },
+    {
+      "name": "HostPluginSet",
+      "result": "Passed",
+      "details": "Host enables all 41 repository plugins."
+    },
+    {
+      "name": "AndroidFileServerConfig",
+      "result": "Passed",
+      "details": "SecurityToken is empty and bAllowNetworkConnection=False."
+    },
+    {
+      "name": "VerificationWrappers",
+      "result": "Passed",
+      "details": "Build, automation, suite, packaging, isolation, startup, two-host portability, and manual-gate wrappers are present."
+    }
+  ]
+}
