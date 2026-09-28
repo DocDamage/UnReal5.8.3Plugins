@@ -286,7 +286,9 @@ Total: 41 plugins, 391 authored automation tests (391 verified across all 41 plu
 - example Blueprint and content assets
 - the DocObjectPool utility, DocWorldActivationISM and DocInspectionMedia
 - the network transports
-- `Package-Host.ps1`, `Verify-PluginIsolation.ps1`, `Validate-Workspace.ps1` and the two clean sample hosts
+- `Verify-PluginIsolation.ps1`, `Validate-Workspace.ps1` and the two clean sample hosts (`Package-Host.ps1` and `Record-ManualGate.ps1` were authored 2026-09-28 but have not run)
+
+Remaining work is organised in `Docs/HANDOFF.md`.
 
 ## Current verification
 Source SHA-256 for every row: `4B97CBB1348FA78BCE48F14A0ED289A0FC066C81C385994842EB8DAB442D5C42`
