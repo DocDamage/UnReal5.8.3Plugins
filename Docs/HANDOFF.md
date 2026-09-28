@@ -8,12 +8,13 @@ traceability docs (per-requirement state). This file lists remaining work only.
 - **Code:** DocModularCore plus 40 gameplay plugins, all runtime-only base code, in `Plugins/DocModular`.
   Each plugin depends only on DocModularCore and engine modules.
 - **Verified:** all four host builds and the full automation suite (391/391) in the 2026-09-28 run series;
-  source SHA-256 at run time `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`.
+  latest full-suite and Development package source SHA-256 `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`.
 - **Isolation:** Core-only plus all 40 Core-and-feature hosts passed non-unity physical-absence builds (41/41);
   evidence is `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json`. Runtime startup, PIE, cooked
   behavior, and second-host portability remain unverified.
-- **Not yet run:** `Scripts/Package-Host.ps1` and `Scripts/Record-ManualGate.ps1`; manual editor fixtures and
-  cooked gates remain pending. `Validate-Workspace.ps1` and the two clean sample hosts have not been created.
+- **Packaging:** `Scripts/Package-Host.ps1` completed one Win64 Development package run, archived the executable
+  and pak, and has no manual gate fixtures. `Scripts/Record-ManualGate.ps1` has not run; manual editor fixtures
+  and cooked gates remain pending. `Validate-Workspace.ps1` and the two clean sample hosts have not been created.
 - **Version control:** `main` publishes to https://github.com/DocDamage/UnReal5.8.3Plugins. These handoff
   corrections are published together on `origin/main`.
 - **Requirement state (all three traceability docs):**
@@ -47,9 +48,8 @@ author `.uasset`/`.umap` content in the Unreal Editor; agents in this project do
 
 ### A. Manual cooked/packaged gates — 11 IDs (M, needs Editor)
 ACO-09, OPT-09, PNT-10, PHO-10, BRC-10, TRM-10, RHY-10, GHO-10, DIA-10, KNO-08, UI-10.
-The procedure, fixture list and what to observe are in `MANUAL_GATES.md`. Steps: author each fixture,
-run `Scripts/Package-Host.ps1` (first run will also prove packaging works at all), then record each gate with
-`Scripts/Record-ManualGate.ps1` with attachments. Both scripts are authored but have never run.
+The procedure, fixture list and what to observe are in `MANUAL_GATES.md`. A bare Development package passed
+(`Scripts/Output/20260928-170040-Package-Win64-Development-62eadc/summary.json`), proving the build/cook/stage/pak/archive pipeline; it contains no gate fixtures. Next: author each fixture, package and observe it, then record each gate with `Scripts/Record-ManualGate.ps1` and attachments.
 
 ### B. Editor-run, PIE and Blueprint fixtures (foundation + expansion, In Progress) (M, needs Editor)
 Base code exists and passes headless tests; each needs a fixture or a run type automation does not do today:
@@ -103,7 +103,7 @@ profile and lists deferred work; it must not be called complete because descript
 
 ## 4. Suggested order
 
-1. Complete A's first packaged build, then record the 11 manual cooked gates.
+1. Author the 11 editor fixtures, package and observe them, then record the manual cooked gates.
 2. Complete B's PIE, Blueprint and editor-run fixtures, including runtime startup checks for isolated hosts and two distinct consumer hosts.
 3. Choose the release profile: which networking (D) and which bridges (E) are in scope. Everything else is deferred explicitly.
 4. Complete D/E for the chosen profile, then G, then H.

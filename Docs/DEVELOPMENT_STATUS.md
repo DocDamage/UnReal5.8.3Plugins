@@ -1,7 +1,7 @@
 # Development Status
 
 ## Workspace and verification identity
-- Updated: 2026-09-28; latest full matrix passed 391/391 and all 41 isolated hosts passed on run-time source SHA-256 `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351` (see "Current verification")
+- Updated: 2026-09-28; latest full matrix passed 391/391 on run-time source SHA-256 `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`; the 41-host isolation matrix passed on its earlier source snapshot (see "Current verification")
 - Branch / remote: local branch `main`, remote `origin` = https://github.com/DocDamage/UnReal5.8.3Plugins. Verification summaries identify the tested source inputs; only `summary.json` run records are intended for commits, while logs and reports stay local.
 - Worktree: `F:\Reusable Unreal Modules`. All files were created by the agent across sessions.
 - Engine: Unreal Engine 5.8.3, CL 58210709, branch `++UE5+Release-5.8`, promoted build, at `C:\Program Files\UE_5.8` (see `ENGINE_COMPATIBILITY.md`)
@@ -291,22 +291,21 @@ Total: 41 plugins, 391 authored automation tests (391 verified across all 41 plu
 Remaining work is organised in `Docs/HANDOFF.md`.
 
 ## Current verification
-Source SHA-256 recorded by each run at execution time: `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`
-
-After these runs, only documentation and evidence records were updated. `Docs/DEPENDENCY_MATRIX.md` is included in the general workspace fingerprint, so the current post-documentation source fingerprint is `1F3E2993D696F1BD5840D4142F6D771B3F1A74C2B080C9115FE40D288318A847`; no code, project configuration, plugin descriptor, or build script changed after verification.
+Latest full-suite and package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`. The isolation matrix was run earlier on source SHA-256 `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`; no plugin implementation or descriptors changed between those runs. The current worktree fingerprint is `2BB37023F8291C20F63604B6E4E6C0DAD87EE5063DB3A40828B1C2D6B7EA08AB` after the package-status wording was added to `MANUAL_GATES.md`; implementation and build inputs are unchanged from the verified run.
 
 | Check | Result | Command/report |
 |---|---|---|
-| Editor build (all plugins) | Passed | `Scripts/Output/20260928-151919-DocModularDevEditor-Development-21fff6` |
-| Editor non-unity build | Passed | `Scripts/Output/20260928-151921-DocModularDevEditor-Development-NoUnity-e04223` |
-| Runtime Development build | Passed | `Scripts/Output/20260928-152118-DocModularDev-Development-df8fe7` |
-| Shipping build | Passed | `Scripts/Output/20260928-152120-DocModularDev-Shipping-7a325d` |
-| Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-152122-Automation-Doc-036e83` |
-| Shipping cook/package | Not Run | No wrapper yet |
+| Editor build (all plugins) | Passed | `Scripts/Output/20260928-165742-DocModularDevEditor-Development-b4f3aa` |
+| Editor non-unity build | Passed | `Scripts/Output/20260928-165744-DocModularDevEditor-Development-NoUnity-4a7475` |
+| Runtime Development build | Passed | `Scripts/Output/20260928-170002-DocModularDev-Development-70ecee` |
+| Shipping build | Passed | `Scripts/Output/20260928-170005-DocModularDev-Shipping-164490` |
+| Automation `Doc.*` (391 tests) | Passed (391/391) | `Scripts/Output/20260928-170007-Automation-Doc-eee4f4` |
+| Development Win64 cook/package | Passed; standalone executable and pak archived | `Scripts/Output/20260928-170040-Package-Win64-Development-62eadc/summary.json` |
+| Shipping cook/package | Not Run | `Scripts/Package-Host.ps1` supports Shipping; only Development was packaged |
 | Isolated dependency hosts (Core-only + one feature per host) | Passed (41/41) | `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json` |
 | Cooked / packaged / audible / rendered manual gates | Not Run | 11 rows listed under "Known issues and risks" |
 
-The isolated result proves compile-time and public-header separation only. It does not prove runtime startup, cooked behavior, PIE behavior, or portability to a second consumer project.
+The package contains no authored gate fixtures; it proves that the Win64 Development build/cook/stage/pak/archive pipeline runs, not that any manual gate passes. The isolated result proves compile-time and public-header separation only. It does not prove runtime startup, PIE behavior, or portability to a second consumer project.
 
 ### Run record, 2026-09-28 audit-and-fix pass
 Every run of the day is listed, including failures. Each "Verify-Suite" run is 4 builds followed by the full `Doc.*` automation.
@@ -331,11 +330,16 @@ Every run of the day is listed, including failures. Each "Verify-Suite" run is 4
 | `20260928-151729-PluginIsolation-fbeba5` | Passed 1/1 | Puzzle Mechanisms | Smoke after path correction; Core + target and all 26 public headers compiled |
 | `20260928-152122-Automation-Doc-036e83` | **Passed 391/391** | 151919 / 151921 / 152118 / 152120 passed | Re-run after adding the isolation verifier; source SHA `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351` |
 | `20260928-152202-PluginIsolation-1b0a78` | **Passed 41/41 hosts** | Core-only + each of 40 features, non-unity | Exact physical plugin sets; 0 sibling descriptor references; every public header compiled in a separate consumer TU |
+| `20260928-165213-Package-Win64-Development-961f49` | Passed (superseded fingerprint) | Win64 Development BuildCookRun | UAT created root `Build/Windows/FileOpenOrder` scratch, which exposed an unstable source hash; fixed by D-052 and rerun below |
+| `20260928-165742` / `20260928-165744` / `20260928-170002` / `20260928-170005` | **Passed** | Editor Unity / Editor non-unity / Game Development / Game Shipping | Full host matrix after D-052; source SHA `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E` |
+| `20260928-170007-Automation-Doc-eee4f4` | **Passed 391/391** | `Doc.*` automation | Full suite after D-052; source hash matches package run |
+| `20260928-170040-Package-Win64-Development-62eadc` | **Passed** | Win64 Development BuildCookRun | Archived `DocModularDev.exe` and one `.pak`; source fingerprint remained stable after UAT generated `Build/` scratch |
 
 ## Known issues and risks
 - **Native execution resolved**: The PowerShell scripts run directly on the host machine.
 - **Full compilation passed**: All 41 plugins compiled successfully across unity, non-unity (`-DisableUnity`), Game Development, and Game Shipping configurations.
 - **Plugin isolation passed**: Core alone and Core plus each of the 40 features compiled with every sibling plugin directory absent. Each public header compiled in an external consumer translation unit. Runtime startup and second-host portability remain unverified.
+- **Development package pipeline passed**: UAT built, cooked, staged, pak'd and archived the host; the archived executable and `.pak` exist. The run has no manual gate fixtures, so all 11 cooked/visual/audible requirement gates remain pending.
 - **Engine APIs verified**: Core engine APIs compile cleanly against UE 5.8.3.
 - CORE-07 (editor menu registration) is Not Started by decision D-008.
 - **Manual gates (Partial, no recorded evidence):** ACO-09, OPT-09, PNT-10, PHO-10, BRC-10, TRM-10, RHY-10, GHO-10 (`MODULES_21_40_TRACEABILITY.md`) and DIA-10, KNO-08, UI-10 (`EXPANSION_TRACEABILITY.md`). Their automated tests pass and cover only the headless part; PHO-10 and BRC-10 assert `Unsupported` rather than fake a result. Each needs a cooked/packaged run with recorded evidence before it can be marked Verified.
@@ -352,9 +356,9 @@ Traceability: `Docs/EXPANSION_TRACEABILITY.md` (Modules 11–20) and `Docs/MODUL
 All 40 modular gameplay plugins and Core are implemented; 391/391 automated tests and all 41 isolated compile/header builds pass. 11 requirements are Partial pending manual cooked gates.
 
 ## Exact next task
-**Objective:** Package a consumer host and complete editor-only release gates.
-Completed: `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus all 40 features with physical sibling absence; dependency and traceability records cite the passing 41/41 summary.
+**Objective:** Complete editor-only cooked gates and establish isolated-host startup/portability.
+Completed: `Scripts/Verify-PluginIsolation.ps1` built Core alone and Core plus all 40 features with physical sibling absence (41/41); `Scripts/Package-Host.ps1` produced a Development Win64 archive. Dependency and traceability records cite the corresponding summaries.
 Next tasks:
-1. Run `Scripts/Package-Host.ps1` and record the 11 cooked/manual gates from `Docs/MANUAL_GATES.md` with `Scripts/Record-ManualGate.ps1`.
+1. Have the required fixtures authored in Unreal Editor, then observe and record the 11 gates from `Docs/MANUAL_GATES.md` with `Scripts/Record-ManualGate.ps1`.
 2. Author two structurally different clean consumer hosts for portability; complete runtime startup checks for the isolated hosts.
 3. Continue with the PIE, Blueprint, network, bridge, profiling and release work tracked in `Docs/HANDOFF.md`.

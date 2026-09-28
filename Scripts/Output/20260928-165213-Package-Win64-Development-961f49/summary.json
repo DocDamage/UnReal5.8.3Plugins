@@ -1,0 +1,16 @@
+{
+  "check": "Package",
+  "result": "Passed",
+  "exitCode": 0,
+  "command": "\"C:\\Program Files\\UE_5.8\\Engine\\Build\\BatchFiles\\RunUAT.bat\" BuildCookRun -project=\"F:\\Reusable Unreal Modules\\DocModularDev.uproject\" -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive -archivedirectory=\"F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-165213-Package-Win64-Development-961f49\\Archive\" -noP4 -utf8output -unattended",
+  "engineVersion": "5.8.3",
+  "changelist": 58210709,
+  "platform": "Win64",
+  "configuration": "Development",
+  "sourceSha256": "1F3E2993D696F1BD5840D4142F6D771B3F1A74C2B080C9115FE40D288318A847",
+  "archive": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-165213-Package-Win64-Development-961f49\\Archive",
+  "executable": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-165213-Package-Win64-Development-961f49\\Archive\\Windows\\DocModularDev.exe",
+  "start": "2026-09-28T16:52:14.7283785-04:00",
+  "end": "2026-09-28T16:53:21.6392801-04:00",
+  "log": "F:\\Reusable Unreal Modules\\Scripts\\Output\\20260928-165213-Package-Win64-Development-961f49\\package.log"
+}

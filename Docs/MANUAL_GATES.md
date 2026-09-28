@@ -19,7 +19,11 @@ pass and cover the headless part only. Until a gate below has a recorded result,
 5. **Update docs.** The row moves to Verified only when the record is `Passed`, has evidence
    attached, and its source hash matches the package run.
 
-Both scripts were authored on 2026-09-28 and have not been run yet.
+`Package-Host.ps1` completed a bare Win64 Development package on 2026-09-28:
+`Scripts/Output/20260928-170040-Package-Win64-Development-62eadc/summary.json`. The archive contains the
+standalone executable and a `.pak`, but no authored gate fixtures, so it does not satisfy any of these gates.
+`Record-ManualGate.ps1` has not been run. A person must author the fixtures in Unreal Editor before observing
+and recording each gate.
 
 ## Gates
 

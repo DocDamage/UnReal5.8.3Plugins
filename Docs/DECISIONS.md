@@ -340,5 +340,11 @@ Short architecture decision records. Each notes deviations from, or choices with
 - **Reason:** A full-suite editor build can conceal missing dependencies while sibling plugins are available. Physical staging tests the base dependency boundary and external header usability directly.
 - **Consequence:** A passing isolation build establishes compile/header independence for that source snapshot. It does not establish runtime startup, packaging, PIE behavior, or portability to a second consumer project.
 
+## D-052: Exclude UAT Build Scratch from Source Fingerprints
+
+- **Decision:** Ignore the repository-root `/Build/` directory in Git and exclude generated `Build` directories from `Get-DocSourceHash`.
+- **Reason:** `RunUAT BuildCookRun` creates file-open-order logs under `Build/Windows`. They are generated scratch, not project inputs; including them makes a successful package run appear to have a different source tree after cooking.
+- **Consequence:** Packaging and manual-gate records keep a stable source fingerprint before and after UAT runs. Packaged artifacts remain under `Scripts/Output/<run-id>/Archive/`.
+
 
 
