@@ -310,6 +310,16 @@ Latest full-suite and package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B8
 
 Consumer-host verification source SHA-256: `EEA7D89D888DF1BB5AA8196952747255F756A695D21C9A2464B661ED1C738EBF`. The broad C++ consumer compiled all 41 Runtime modules and public headers; its final gate was build-only. The nested local-plugin host staged source-matching copies of only Core and Interaction, loaded both modules, reached play, completed an instant interaction between two ordinary actors, and shut down cleanly. The package contains no authored gate fixtures; it proves the Win64 Development build/cook/stage/pak/archive pipeline runs, not that any manual gate passes. The isolated startup run proves each individual plugin set starts with sibling directories absent. PIE and cooked behavior remain unverified.
 
+### Evidence category ledger
+
+| Category | State | Evidence and scope |
+|---|---|---|
+| Source identity | Recorded per run | Each verification summary records its source SHA-256; the source snapshots for the full suite, isolation/startup matrix, and two-host consumer run are listed above. |
+| Native builds | Passed | Four-target host matrix and 41 physical-absence isolation builds, with reports in the table above. |
+| Functional behavior | Passed for automated/headless scope | `Doc.*` automation passed 391/391; isolated startup passed 41/41; focused consumer completed its AActor interaction. These do not establish editor, PIE, or cooked behavior. |
+| Network transport | Not Run | No transport profile or transport implementation is selected. Authority-aware local tests are not network evidence; deferred requirements are listed in `Docs/HANDOFF.md`, workstream D. |
+| Packaging | Development pipeline passed; manual gates Not Run | The Win64 package summary records build/cook/stage/pak/archive. It contains no manual-gate fixtures, so it does not verify cooked asset, audible, or rendered behavior. |
+
 ### Run record, 2026-09-28 audit-and-fix pass
 Every run of the day is listed, including failures. Each "Verify-Suite" run is 4 builds followed by the full `Doc.*` automation.
 

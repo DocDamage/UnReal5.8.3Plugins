@@ -26,7 +26,7 @@ traceability docs (per-requirement state). This file lists remaining work only.
 | Doc | Verified | Partial (manual gate) | In Progress | Not Started | Untraced |
 |---|---|---|---|---|---|
 | `REQUIREMENTS_TRACEABILITY.md` (Modules 1–10, 87 IDs) | 59 | 0 | 17 | 11 | 0 |
-| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 96 | 3 | 32 | 17 | 0 |
+| `EXPANSION_TRACEABILITY.md` (Modules 11–20, 148 IDs) | 97 | 3 | 31 | 17 | 0 |
 | `MODULES_21_40_TRACEABILITY.md` (Modules 21–40, 232 IDs) | 193 | 8 | 0 | 31 | 0 |
 
 The automated base logic, compile-time physical-absence checks, individual plugin startup checks, and two-host

@@ -15,14 +15,14 @@ Current profile: base plugins only; no bridges, editor modules, or authored cont
 - [x] **Zero Sibling Plugin Coupling**: Core-only and Core-plus-one-feature non-unity builds passed for all 40 features with every sibling directory absent; all 41 hosts also passed headless game-mode runtime startup. Evidence: `Scripts/Output/20260928-152202-PluginIsolation-1b0a78/summary.json` and `Scripts/Output/20260928-174055-IsolatedStartup-c9a914/summary.json`.
 - [x] **Full Automated Test Suite**: All 391 `Doc.*` tests passed, with 0 failures: `Scripts/Output/20260928-170007-Automation-Doc-eee4f4`.
 - Full-suite and Development package source SHA-256: `251DCB2A320E8795764B7AFC8EE3028B89D77F1E5FCA8C65C97EEC11DD66DF7E`. Physical-absence compile matrix source SHA-256: `8A54FD0208FA36599DAF1419E439EC2E6ED778BB4EA8E64EB6A83429B5749351`. Isolated startup/preflight source SHA-256: `ABCAE2385342683F50BEFF478D4F500576E125E5BD1C4D76388F794B07E664B0`. Two-consumer-host verification source SHA-256: `EEA7D89D888DF1BB5AA8196952747255F756A695D21C9A2464B661ED1C738EBF`.
-- [ ] **Complete Requirement Traceability**: 348 of 467 requirement IDs are Verified; 11 are Partial, 49 In Progress, and 59 Not Started.
+- [ ] **Complete Requirement Traceability**: 349 of 467 requirement IDs are Verified; 11 are Partial, 48 In Progress, and 59 Not Started.
 
 | Scope | Verified | Partial | In Progress | Not Started | Total |
 |---|---:|---:|---:|---:|---:|
 | Modules 1–10 | 59 | 0 | 17 | 11 | 87 |
-| Modules 11–20 | 96 | 3 | 32 | 17 | 148 |
+| Modules 11–20 | 97 | 3 | 31 | 17 | 148 |
 | Modules 21–40 | 193 | 8 | 0 | 31 | 232 |
-| **Total** | **348** | **11** | **49** | **59** | **467** |
+| **Total** | **349** | **11** | **48** | **59** | **467** |
 
 - [x] **Documentation & Architecture Standards**: Each plugin has a README; architectural decisions are recorded in `Docs/DECISIONS.md` (D-001 through D-055).
 
